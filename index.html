@@ -91,6 +91,20 @@ h1{font-family:"IBM Plex Sans",sans-serif;font-size:clamp(2.45rem,5vw,4.65rem);l
 .list li::before{content:"✓";width:18px;height:18px;border-radius:999px;background:#dcfce7;color:#047857;display:flex;align-items:center;justify-content:center;font-family:"IBM Plex Sans",sans-serif;font-size:.7rem;font-weight:800;margin-top:.08rem}
 .trust{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:.7rem}
 .trust-item{border:1px solid var(--line);border-radius:8px;background:#fff;padding:.85rem;text-align:center;font-family:"IBM Plex Sans",sans-serif;font-size:.76rem;font-weight:800;color:#334155}
+.faq-groups{display:grid;grid-template-columns:1fr;gap:1rem}
+.faq-group{border:1px solid var(--line);border-radius:8px;background:#fff;padding:1.05rem}
+.faq-group h3{font-family:"IBM Plex Sans",sans-serif;font-size:.9rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);margin:0 0 .75rem}
+.faq-list{display:grid;gap:.55rem}
+.faq-list details{border:1px solid #e0e9f3;border-radius:7px;background:#fbfcfd;overflow:hidden}
+.faq-list summary{list-style:none;cursor:pointer;padding:.78rem .9rem;font-family:"IBM Plex Sans",sans-serif;font-size:.86rem;font-weight:800;color:var(--ink);display:flex;align-items:center;justify-content:space-between;gap:.8rem}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary::after{content:"+";font-size:1rem;color:var(--teal);flex:0 0 auto}
+.faq-list details[open] summary::after{content:"-"}
+.faq-list p{margin:0;padding:0 .9rem .85rem;font-size:.82rem;line-height:1.65;color:var(--muted)}
+.license-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.8rem;margin-top:.9rem}
+.license-item{border:1px solid var(--line);border-radius:8px;background:#fff;padding:1rem}
+.license-item strong{display:block;font-family:"IBM Plex Sans",sans-serif;font-size:1.15rem;color:var(--ink);line-height:1.15;margin-bottom:.32rem}
+.license-item span{display:block;font-size:.78rem;line-height:1.5;color:var(--muted)}
 .cta-band{width:min(1160px,calc(100% - 40px));margin:1rem auto 3.5rem;border:1px solid #cfe0f5;border-radius:8px;background:var(--navy);color:#fff;padding:1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1.2rem}
 .cta-band h2{font-family:"IBM Plex Sans",sans-serif;font-size:1.45rem;line-height:1.2;margin:0 0 .28rem;color:#fff}
 .cta-band p{font-size:.88rem;line-height:1.65;color:#d5e3f5;max-width:690px;margin:0}
@@ -107,8 +121,8 @@ footer{border-top:1px solid var(--line);background:#fff;padding:1.15rem 0;color:
   .hero-bg{background-image:linear-gradient(90deg,rgba(7,29,52,.94) 0%,rgba(7,29,52,.82) 58%,rgba(7,29,52,.42) 100%),linear-gradient(180deg,rgba(7,29,52,.28) 0%,rgba(7,29,52,.28) 50%,rgba(7,29,52,.82) 100%),url("hero-screenshot.png");background-size:auto 100%;background-position:58% top}
   .hero-inner{width:min(100% - 28px,720px);padding:4.2rem 0 3rem}
   h1{font-size:clamp(2.2rem,12vw,3.45rem)}
-  .proof-grid,.card-grid,.steps,.split,.trust{grid-template-columns:1fr}
-  .teaser{width:min(100% - 28px,720px);grid-template-columns:1fr;margin-top:-70px}
+  .proof-grid,.card-grid,.steps,.split,.trust,.license-strip{grid-template-columns:1fr}
+  .teaser{width:min(100% - 28px,720px);grid-template-columns:1fr;margin-top:-28px}
   .mini-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
   .section{width:min(100% - 28px,720px);padding:2.2rem 0}
   .section-head{display:block}
@@ -130,6 +144,10 @@ footer{border-top:1px solid var(--line);background:#fff;padding:1.15rem 0;color:
   .hero-copy p{font-size:.94rem;line-height:1.62}
   .hero-actions{align-items:stretch}
   .hero-actions .btn{width:100%}
+  .proof-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:.45rem}
+  .proof{min-height:92px;padding:.55rem .45rem}
+  .proof strong{font-size:.82rem;line-height:1.15}
+  .proof span{font-size:.62rem;line-height:1.35}
   .teaser,.section,.cta-band{width:calc(100% - 22px)}
   .mini-grid{display:none}
 }
@@ -150,9 +168,9 @@ footer{border-top:1px solid var(--line);background:#fff;padding:1.15rem 0;color:
       <a href="#ablauf">Ablauf</a>
       <a href="#daten">Daten</a>
       <a href="#lizenz">Lizenz</a>
-      <a href="#hinweis">Hinweis</a>
+      <a href="#faq">FAQ</a>
     </nav>
-    <a class="btn dark" href="https://github.com/BM1964-25/SMART-RISK-Vertragsanalyse" target="_blank" rel="noopener">App starten</a>
+    <a class="btn dark" href="https://github.com/BM1964-25/SMART-RISK-Vertragsanalyse" target="_blank" rel="noopener">3 Tage kostenlos testen</a>
   </div>
 </header>
 
@@ -161,29 +179,29 @@ footer{border-top:1px solid var(--line);background:#fff;padding:1.15rem 0;color:
     <div class="hero-bg" aria-hidden="true"></div>
     <div class="hero-inner">
       <div class="hero-copy">
-        <div class="eyebrow">BuiltSmart-AI · BuiltSmart Hub</div>
+        <div class="eyebrow">Browserbasierte BuiltSmart App</div>
         <div class="pill">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
-          <span>Risiken erkennen. Verträge verstehen. Sicher entscheiden.</span>
+          <span>Moderne Browser auf Windows, macOS und anderen Systemen.</span>
         </div>
         <h1 id="hero-title">SMART RISK Vertragsanalyse</h1>
-        <p>SMART RISK Vertragsanalyse prueft Vertragstexte KI-gestuetzt, erkennt Risiken, strukturiert Fundstellen, gibt Empfehlungen und erzeugt lokale Akten sowie druckbare Ergebnisberichte.</p>
+        <p>Risiken erkennen. Vertraege verstehen. Sicher entscheiden. SMART RISK Vertragsanalyse prueft Vertragstexte KI-gestuetzt, strukturiert Fundstellen, gibt Empfehlungen und erzeugt lokale Akten sowie druckbare Ergebnisberichte. Kein Installer erforderlich.</p>
         <div class="hero-actions">
-          <a class="btn primary" href="https://github.com/BM1964-25/SMART-RISK-Vertragsanalyse" target="_blank" rel="noopener">Vertrag pruefen</a>
+          <a class="btn primary" href="https://github.com/BM1964-25/SMART-RISK-Vertragsanalyse" target="_blank" rel="noopener">3 Tage kostenlos testen</a>
           <a class="btn secondary" href="#ablauf">Ablauf ansehen</a>
         </div>
         <div class="proof-grid" aria-label="Kernvorteile">
           <div class="proof">
-            <strong>Risiko-Score</strong>
-            <span>Dashboard mit schneller Ersteinschaetzung und priorisierten Risikoklassen.</span>
+            <strong>1000 Trial-Credits</strong>
+            <span>App-spezifische BuiltSmart AI Test-Credits beim Start des Trials.</span>
           </div>
           <div class="proof">
-            <strong>Fundstellen</strong>
-            <span>Einzelne Risiken mit Kategorie, Klauselbezug, Folge und Empfehlung.</span>
+            <strong>499 EUR netto</strong>
+            <span>Jahreslizenz pro App und Jahr mit 12 Monaten Laufzeit.</span>
           </div>
           <div class="proof">
-            <strong>Lokale Akten</strong>
-            <span>Analysen im Browser speichern, exportieren und als Bericht dokumentieren.</span>
+            <strong>Persoenlicher Zugriff</strong>
+            <span>Pro Lizenz ist ein persoenlicher Nutzerzugriff vorgesehen.</span>
           </div>
         </div>
       </div>
@@ -194,12 +212,12 @@ footer{border-top:1px solid var(--line);background:#fff;padding:1.15rem 0;color:
     <div>
       <div class="kicker">Schneller Ueberblick</div>
       <h2>Von Vertragstext zu Risiko-Score, Fundliste, Empfehlungen und Bericht.</h2>
-      <p>Die Landingpage informiert nur ueber SMART RISK und fuehrt zur App. Die eigentliche Vertragsanalyse bleibt in der separaten Anwendung.</p>
+      <p>Die Landingpage informiert nur ueber SMART RISK und fuehrt zur App. Trial, Kauf, Lizenzpruefung und BuiltSmart AI Credits laufen ueber Nutzerkonto und Magic Link.</p>
     </div>
     <div class="mini-grid" aria-hidden="true">
       <div class="mini"><strong>4</strong><span>Schritte</span></div>
       <div class="mini"><strong>3</strong><span>Parteien</span></div>
-      <div class="mini"><strong>Lokal</strong><span>Akten</span></div>
+      <div class="mini"><strong>1000</strong><span>Trial-Credits</span></div>
     </div>
   </section>
 
@@ -209,7 +227,7 @@ footer{border-top:1px solid var(--line);background:#fff;padding:1.15rem 0;color:
         <div class="kicker">Zentrale App-Funktionen</div>
         <h2>Eine strukturierte Arbeitsumgebung fuer KI-gestuetzte Vertragspruefung.</h2>
       </div>
-      <p>SMART RISK fuehrt vom Vertragstext ueber die Risikoanalyse bis zur lokalen Dokumentation.</p>
+      <p>KI ist Bestandteil der App-Funktion. Die Nutzung erfolgt ueber BuiltSmart AI Credits oder optional ueber einen eigenen Anthropic API Key.</p>
     </div>
     <div class="card-grid">
       <article class="card">
@@ -285,25 +303,55 @@ footer{border-top:1px solid var(--line);background:#fff;padding:1.15rem 0;color:
         <ul class="list">
           <li>Lokale Akten speichern und spaeter wieder oeffnen.</li>
           <li>JSON Export/Import fuer Projektstaende und Analyseergebnisse.</li>
-          <li>App-Daten bleiben getrennt von Lizenzdaten und KI-Zugang.</li>
+          <li>App-Inhalte bleiben lokal in der jeweiligen App, soweit die App so gebaut ist.</li>
         </ul>
       </div>
       <div class="panel">
         <h3>API & Lizenz</h3>
         <ul class="list">
-          <li>BuiltSmart AI Guthaben oder eigener Anthropic API-Key.</li>
-          <li>API-Key lokal im Browser speichern, nicht in dieser Landingpage.</li>
-          <li>Keine geheimen API-Keys, Supabase Service Keys oder Stripe Secrets im Frontend.</li>
+          <li>BuiltSmart AI Credits gehoeren zum jeweiligen Nutzerkonto und sind appuebergreifend innerhalb dieses Nutzerkontos nutzbar.</li>
+          <li>Alternativ kann ein eigener Anthropic API Key genutzt werden; die Abrechnung erfolgt direkt ueber Anthropic.</li>
+          <li>Der Anthropic API Key bleibt lokal in der jeweiligen App und wird nicht an das BuiltSmart Lizenzsystem gesendet.</li>
+          <li>Keine geheimen Provider-Keys, Service-Rollen oder Zahlungs-Secrets im Frontend.</li>
         </ul>
       </div>
     </div>
   </section>
 
-  <section class="section" id="lizenz" aria-label="Lizenz und Zielgruppe">
+  <section class="section" id="lizenz" aria-label="Lizenzmodell">
+    <div class="section-head">
+      <div>
+        <div class="kicker">Lizenzmodell</div>
+        <h2>3 Tage Trial, danach Jahreslizenz mit persoenlichem Nutzerzugriff.</h2>
+      </div>
+      <p>Fuer Trial, Kauf, Lizenzpruefung und BuiltSmart AI Credits ist ein Nutzerkonto erforderlich. Der Login erfolgt per Magic Link.</p>
+    </div>
+    <div class="license-strip">
+      <div class="license-item"><strong>3 Tage</strong><span>Kostenlos testen mit vollem App-Zugriff und 1000 app-spezifischen Trial-Credits.</span></div>
+      <div class="license-item"><strong>499 EUR netto</strong><span>Jahreslizenz pro App und Jahr. Laufzeit 12 Monate, automatische Verlaengerung um weitere 12 Monate.</span></div>
+      <div class="license-item"><strong>1 Monat</strong><span>Kuendigung bis 1 Monat vor Ablauf. Mehrere Lizenzen derselben App koennen ueber die Menge im Checkout gekauft werden.</span></div>
+    </div>
+    <div class="card-grid" style="margin-top:.9rem">
+      <article class="card">
+        <h3>Persoenlicher Nutzerzugriff</h3>
+        <p>Pro Lizenz ist ein persoenlicher Nutzerzugriff vorgesehen. Ein Checkout gilt jeweils fuer eine App.</p>
+      </article>
+      <article class="card">
+        <h3>KI-Nutzung separat</h3>
+        <p>Die Jahreslizenz enthaelt den App-Zugang. KI-Aktionen werden separat ueber BuiltSmart AI Credits oder einen eigenen Anthropic API Key genutzt.</p>
+      </article>
+      <article class="card">
+        <h3>Getrennte Nutzerzugriffe</h3>
+        <p>Mehrere Lizenzen bedeuten mehrere getrennte persoenliche Nutzerzugriffe, nicht einen gemeinsamen Team- oder Projektbereich.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" aria-label="Zielgruppe">
     <div class="section-head">
       <div>
         <div class="kicker">Fuer wen</div>
-        <h2>Fuer alle, die Vertrage strukturiert vorbereiten, pruefen oder besser verstehen wollen.</h2>
+        <h2>Fuer alle, die Vertraege strukturiert vorbereiten, pruefen oder besser verstehen wollen.</h2>
       </div>
     </div>
     <div class="card-grid">
@@ -317,8 +365,101 @@ footer{border-top:1px solid var(--line);background:#fff;padding:1.15rem 0;color:
       </article>
       <article class="card">
         <h3>BuiltSmart Hub</h3>
-        <p>Branding und Zugang sind auf BuiltSmart-AI / BuiltSmart Hub ausgerichtet.</p>
+        <p>Branding und Zugang sind auf BuiltSmart-AI / BuiltSmart Hub ausgerichtet. App-Key: smart-risk-vertragsanalyse.</p>
       </article>
+    </div>
+  </section>
+
+  <section class="section" id="faq" aria-label="FAQ">
+    <div class="section-head">
+      <div>
+        <div class="kicker">FAQ</div>
+        <h2>Fragen zur App, Nutzung, Lizenz und KI.</h2>
+      </div>
+    </div>
+    <div class="faq-groups">
+      <div class="faq-group">
+        <h3>Zur App</h3>
+        <div class="faq-list">
+          <details>
+            <summary>Welchen Nutzen bringt mir SMART RISK Vertragsanalyse?</summary>
+            <p>SMART RISK Vertragsanalyse hilft, Vertragstexte schneller zu verstehen, Risiken sichtbar zu machen, Fundstellen zu strukturieren und Ergebnisse als lokale Akte oder druckbaren Bericht nachvollziehbar zu dokumentieren.</p>
+          </details>
+          <details>
+            <summary>Welche Vorteile habe ich bei der Nutzung?</summary>
+            <p>Die App verbindet klaren Workflow, Risiko-Score, Fundliste, Empfehlungen und Bericht. Dadurch werden manuelle Notizen reduziert, Pruefpunkte priorisiert und Entscheidungen besser vorbereitet.</p>
+          </details>
+          <details>
+            <summary>Fuer wen ist SMART RISK Vertragsanalyse gedacht?</summary>
+            <p>Die App richtet sich an Selbststaendige, kleine Unternehmen, Projektverantwortliche, Einkauf, Verwaltung sowie Personen, die Vertraege vor einer Entscheidung strukturiert vorpruefen wollen.</p>
+          </details>
+          <details>
+            <summary>Welche Aufgaben unterstuetzt die App?</summary>
+            <p>Unterstuetzt werden Vertragspartei waehlen, Vertrag hochladen oder Text einfuegen, Vertragstyp und Pruefkategorien ermitteln, Risikoanalyse starten, Dashboard, Fundliste, Empfehlungen, lokale Akten, JSON Export/Import und HTML-/Print-Berichte.</p>
+          </details>
+          <details>
+            <summary>Welche Rolle spielt KI in SMART RISK Vertragsanalyse?</summary>
+            <p>KI ist Bestandteil der App-Funktion. Sie unterstuetzt die Analyse von Vertragstexten, die Strukturierung von Risiken, Empfehlungen und Zusammenfassungen. Die Nutzung erfolgt ueber BuiltSmart AI Credits oder optional ueber einen eigenen Anthropic API Key.</p>
+          </details>
+          <details>
+            <summary>Welche Inhalte kann ich in der App bearbeiten, speichern oder organisieren?</summary>
+            <p>In der App koennen Vertragstexte, Pruefperspektiven, Pruefkategorien, Analyseergebnisse, Empfehlungen und lokale Akten organisiert werden. Fuer gespeicherte Inhalte stehen lokale Speicherung im Browser sowie JSON Export/Import zur Verfuegung.</p>
+          </details>
+        </div>
+      </div>
+      <div class="faq-group">
+        <h3>Nutzung, Lizenz und KI</h3>
+        <div class="faq-list">
+          <details>
+            <summary>Brauche ich ein Nutzerkonto?</summary>
+            <p>Ja. Fuer Trial, Kauf, Lizenzpruefung und BuiltSmart AI Credits ist ein Nutzerkonto erforderlich. Der Login erfolgt per Magic Link.</p>
+          </details>
+          <details>
+            <summary>Muss ich etwas installieren?</summary>
+            <p>Nein. Die App laeuft browserbasiert in modernen Browsern auf Windows, macOS und anderen Systemen. Es ist kein Installer und keine separate Desktop-Installation erforderlich.</p>
+          </details>
+          <details>
+            <summary>Wie funktioniert der Trial?</summary>
+            <p>Der Trial laeuft 3 Tage und bietet vollen App-Zugriff. 1000 app-spezifische BuiltSmart AI Trial-Credits werden beim Start des Trials gutgeschrieben.</p>
+          </details>
+          <details>
+            <summary>Was ist in der Jahreslizenz enthalten?</summary>
+            <p>Die Jahreslizenz kostet 499 EUR netto pro App und Jahr und enthaelt den App-Zugang fuer einen persoenlichen Nutzerzugriff. Die Laufzeit betraegt 12 Monate und verlaengert sich automatisch um weitere 12 Monate. Die Kuendigung ist bis 1 Monat vor Ablauf moeglich.</p>
+          </details>
+          <details>
+            <summary>Ist KI-Nutzung pauschal in der Lizenz enthalten?</summary>
+            <p>Nein. Die Jahreslizenz enthaelt den App-Zugang. KI-Aktionen werden ueber BuiltSmart AI Credits oder ueber einen eigenen Anthropic API Key genutzt.</p>
+          </details>
+          <details>
+            <summary>Wie funktionieren BuiltSmart AI Credits?</summary>
+            <p>BuiltSmart AI Credits gehoeren zum jeweiligen Nutzerkonto und sind appuebergreifend innerhalb dieses Nutzerkontos nutzbar. Bei mehreren Lizenzen werden KI-Guthaben nicht automatisch auf alle Nutzer verteilt.</p>
+          </details>
+          <details>
+            <summary>Kann ich einen eigenen Anthropic API Key nutzen?</summary>
+            <p>Ja. Alternativ zu BuiltSmart AI Credits kann ein eigener Anthropic API Key genutzt werden. Die Abrechnung erfolgt dann direkt ueber Anthropic. Der Key bleibt lokal in der jeweiligen App und wird nicht an das BuiltSmart Lizenzsystem gesendet.</p>
+          </details>
+          <details>
+            <summary>Kann ich mehrere Lizenzen kaufen?</summary>
+            <p>Ja. Mehrere Lizenzen derselben App koennen im Checkout ueber die Menge gekauft werden. Jede Lizenz ist fuer einen getrennten persoenlichen Nutzerzugriff vorgesehen.</p>
+          </details>
+          <details>
+            <summary>Wie werden KI-Guthaben bei mehreren Lizenzen berechnet?</summary>
+            <p>Mehrere App-Lizenzen schalten mehrere persoenliche Nutzerzugriffe frei. BuiltSmart AI Credits werden separat pro Nutzerkonto gefuehrt. Trial-Credits werden beim Start des Trials dem jeweiligen Nutzerkonto gutgeschrieben. Bezahlte AI-Credits stehen dem Nutzerkonto zur Verfuegung, ueber das sie gekauft wurden.</p>
+          </details>
+          <details>
+            <summary>Gibt es einen gemeinsamen Team- oder Projektbereich?</summary>
+            <p>Nein. Mehrere Lizenzen bedeuten mehrere getrennte persoenliche Nutzerzugriffe, nicht einen gemeinsamen Team- oder Projektbereich.</p>
+          </details>
+          <details>
+            <summary>Kann ich mehrere unterschiedliche Apps gemeinsam kaufen?</summary>
+            <p>Nein. Ein Checkout gilt jeweils fuer eine App. Mehrere Lizenzen derselben App koennen ueber die Menge gekauft werden.</p>
+          </details>
+          <details>
+            <summary>Wo bleiben App-Inhalte?</summary>
+            <p>App-Inhalte bleiben in der jeweiligen App lokal im Browser, soweit die App so gebaut ist. SMART RISK Vertragsanalyse bietet lokale Akten sowie JSON Export/Import fuer gespeicherte Inhalte.</p>
+          </details>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -343,12 +484,13 @@ footer{border-top:1px solid var(--line);background:#fff;padding:1.15rem 0;color:
 
   <section class="cta-band" aria-label="Abschluss">
     <div>
-      <h2>Vertrag strukturierter pruefen.</h2>
-      <p>Starten Sie SMART RISK Vertragsanalyse im separaten App-Repository und nutzen Sie die KI-gestuetzte Vertragspruefung in der Anwendung.</p>
+      <h2>3 Tage kostenlos testen.</h2>
+      <p>Starten Sie SMART RISK Vertragsanalyse mit vollem App-Zugriff im Trial. Fuer Trial, Kauf, Lizenzpruefung und BuiltSmart AI Credits ist ein Nutzerkonto mit Magic Link Login erforderlich.</p>
     </div>
     <div class="hero-actions">
-      <a class="btn primary" href="https://github.com/BM1964-25/SMART-RISK-Vertragsanalyse" target="_blank" rel="noopener">App starten</a>
-      <a class="btn light" href="#funktionen">Details ansehen</a>
+      <a class="btn primary" href="https://github.com/BM1964-25/SMART-RISK-Vertragsanalyse" target="_blank" rel="noopener">3 Tage kostenlos testen</a>
+      <a class="btn light" href="https://github.com/BM1964-25/SMART-RISK-Vertragsanalyse" target="_blank" rel="noopener">Jahreslizenz kaufen</a>
+      <a class="btn light" href="https://github.com/BM1964-25/SMART-RISK-Vertragsanalyse" target="_blank" rel="noopener">Mit Magic Link einloggen</a>
     </div>
   </section>
 </main>
