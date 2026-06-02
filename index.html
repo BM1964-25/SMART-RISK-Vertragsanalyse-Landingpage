@@ -136,6 +136,9 @@ h1{font-family:"IBM Plex Sans",sans-serif;font-size:clamp(2.45rem,5vw,4.65rem);l
 .license-copy h2{font-family:"IBM Plex Sans",sans-serif;font-size:clamp(2.2rem,4.1vw,3.65rem);line-height:1.03;letter-spacing:0;margin:0 0 1.05rem;max-width:560px;color:#fff}
 .license-copy p{font-size:.96rem;line-height:1.72;color:#d9e4f1;max-width:560px;margin:0 0 1.15rem}
 .license-copy p strong{color:#fff}
+.license-benefits{display:grid;gap:.7rem;margin:1.45rem 0 1.35rem;padding:0;max-width:570px}
+.license-benefits li{display:grid;grid-template-columns:22px minmax(0,1fr);gap:.7rem;align-items:start;list-style:none;color:#edf5ff;font-size:.95rem;line-height:1.55}
+.license-benefits li::before{content:"✓";width:22px;height:22px;border-radius:999px;background:rgba(158,230,220,.16);color:#9ee6dc;display:flex;align-items:center;justify-content:center;font-family:"IBM Plex Sans",sans-serif;font-size:.76rem;font-weight:800;margin-top:.08rem}
 .price-card{position:relative;border:1px solid rgba(216,226,240,.36);border-radius:8px;background:rgba(255,255,255,.14);box-shadow:rgba(0,0,0,.14) 0 28px 70px;padding:2rem;overflow:hidden}
 .price-card::before{content:"";position:absolute;inset:0;background:linear-gradient(145deg,rgba(255,255,255,.08),rgba(255,255,255,0) 54%);pointer-events:none}
 .price-card > *{position:relative}
@@ -390,9 +393,14 @@ footer{border-top:1px solid var(--line);background:#fff;padding:1.15rem 0;color:
     <div class="license-layout">
       <div class="license-copy">
         <div class="kicker">Lizenzmodell</div>
-        <h2>Eine Jahreslizenz für professionelle Vertragsprüfung.</h2>
-        <p>Für Unternehmen, Selbstständige, Projektverantwortliche und Verwaltungen, die Vertragstexte strukturiert prüfen, Risiken besser einordnen und Ergebnisse nachvollziehbar dokumentieren möchten.</p>
-        <p><strong>Für Trial, Kauf, Lizenzprüfung und BuiltSmart AI Credits ist ein Nutzerkonto mit Magic Link erforderlich.</strong> Pro Lizenz ist ein persönlicher Nutzerzugriff vorgesehen; mehrere Lizenzen derselben App können über die Menge im Checkout gekauft werden.</p>
+        <h2>Professionelle Vertragsprüfung mit kalkulierbarem Jahreszugang.</h2>
+        <p>SMART RISK richtet sich an Anwender, die Vertragsrisiken nicht nur erkennen, sondern belastbar priorisieren, intern erklären und revisionsfähig dokumentieren möchten.</p>
+        <ul class="license-benefits">
+          <li>Strukturierte Risikoanalyse mit Score, Fundstellen, Empfehlungen und druckbarem Ergebnisbericht.</li>
+          <li>Lokale Akten, JSON Export/Import und nachvollziehbare Dokumentation für Prüfung, Freigabe und Nachverhandlung.</li>
+          <li>Persönlicher Nutzerzugriff mit 3 Tagen Trial und 1000 app-spezifischen Trial-Credits.</li>
+        </ul>
+        <p><strong>Trial, Kauf, Lizenzprüfung und BuiltSmart AI Credits laufen über Nutzerkonto und Magic Link.</strong> Die Jahreslizenz umfasst den App-Zugang; KI-Nutzung erfolgt über BuiltSmart AI Credits oder einen eigenen Anthropic API Key.</p>
       </div>
       <article class="price-card" aria-label="Jahreslizenz SMART RISK Vertragsanalyse">
         <div class="price-top">
