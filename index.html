@@ -78,6 +78,12 @@ h1{font-family:"IBM Plex Sans",sans-serif;font-size:clamp(2.45rem,5vw,4.65rem);l
 .card h3,.panel h3,.step h3{font-family:"IBM Plex Sans",sans-serif;color:var(--ink);margin:0 0 .48rem}
 .card h3,.panel h3{font-size:.86rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
 .card p,.card li,.panel p,.panel li,.step p{font-size:.82rem;line-height:1.65;color:var(--muted);margin:0}
+.feature-grid{gap:1rem}
+.feature-card{position:relative;min-height:210px;padding:1.45rem 1.35rem 1.35rem;overflow:hidden}
+.feature-card::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:linear-gradient(90deg,var(--teal),#9ee6dc)}
+.feature-card .num{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:999px;background:#0e2138;color:#fff;font-family:"IBM Plex Sans",sans-serif;font-size:.78rem;font-weight:800;margin-bottom:1rem}
+.feature-card h3{font-size:.94rem;line-height:1.25;margin-bottom:.65rem}
+.feature-card p{font-size:.86rem;line-height:1.7;color:#4a5b6e}
 .steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.8rem;counter-reset:step}
 .step{min-height:190px}
 .step::before{counter-increment:step;content:counter(step);width:30px;height:30px;border-radius:999px;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;font-family:"IBM Plex Sans",sans-serif;font-weight:800;font-size:.82rem;margin-bottom:.75rem}
@@ -254,23 +260,26 @@ footer{border-top:1px solid var(--line);background:#fff;padding:1.15rem 0;color:
   <section class="section tight" id="funktionen" aria-label="Kernfunktionen">
     <div class="section-head">
       <div>
-        <div class="kicker">Zentrale App-Funktionen</div>
-        <h2>Eine strukturierte Arbeitsumgebung für KI-gestützte Vertragsprüfung.</h2>
+        <div class="kicker">Kernfunktionen</div>
+        <h2>Professionelle Vertragsanalyse mit klarer Prüflogik.</h2>
       </div>
-      <p>KI ist Bestandteil der App-Funktion. Die Nutzung erfolgt über BuiltSmart AI Credits oder optional über einen eigenen Anthropic API Key.</p>
+      <p>SMART RISK verbindet KI-gestützte Textanalyse mit strukturierter Fundstellendokumentation, priorisierten Empfehlungen und lokal gesicherten Ergebnisakten.</p>
     </div>
-    <div class="card-grid">
-      <article class="card">
-        <h3>Vertrag vorbereiten</h3>
-        <p>Vertragspartei wählen: Verbraucher, Unternehmen oder Öffentliche Hand. Vertrag hochladen oder Text einfügen.</p>
+    <div class="card-grid feature-grid">
+      <article class="card feature-card">
+        <span class="num" aria-hidden="true">01</span>
+        <h3>Prüfkontext präzisieren</h3>
+        <p>Vertragspartei, Vertragstyp und Prüfperspektive werden sauber eingeordnet, bevor Vertragstexte hochgeladen oder direkt eingefügt werden.</p>
       </article>
-      <article class="card">
-        <h3>Risiken analysieren</h3>
-        <p>Vertragstyp und Prüfkategorien ermitteln, Risikoanalyse starten und Ergebnisse im Dashboard auswerten.</p>
+      <article class="card feature-card">
+        <span class="num" aria-hidden="true">02</span>
+        <h3>Risiken belastbar strukturieren</h3>
+        <p>Die Analyse verdichtet Fundstellen zu Risiko-Score, Schweregraden, Kategorien, Klauselbezug und nachvollziehbaren Begründungen.</p>
       </article>
-      <article class="card">
-        <h3>Dokumentieren</h3>
-        <p>Fundliste, Empfehlungen, HTML-/Print-Bericht, lokale Akten sowie JSON Export/Import nutzen.</p>
+      <article class="card feature-card">
+        <span class="num" aria-hidden="true">03</span>
+        <h3>Ergebnisse entscheidungsreif sichern</h3>
+        <p>Empfehlungen, lokale Akten, JSON Export/Import und druckbare HTML-/Print-Berichte schaffen eine dokumentierte Grundlage für nächste Schritte.</p>
       </article>
     </div>
   </section>
