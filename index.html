@@ -61,16 +61,8 @@ h1{font-family:"IBM Plex Sans",sans-serif;font-size:clamp(2.45rem,5vw,4.65rem);l
 .proof::before{content:"✓";position:absolute;top:1rem;left:50%;transform:translateX(-50%);font-family:"IBM Plex Sans",sans-serif;font-size:1.05rem;font-weight:800;color:#9ee6dc}
 .proof strong{display:block;font-family:"IBM Plex Sans",sans-serif;font-size:1.08rem;line-height:1.18;color:#fff;margin-bottom:.42rem}
 .proof span{display:block;font-size:.82rem;line-height:1.45;color:#eef4fb}
-.teaser{position:relative;z-index:3;margin:0 auto;width:100%;border-top:1px solid rgba(215,227,240,.9);border-bottom:1px solid rgba(215,227,240,.9);background:linear-gradient(180deg,#fff 0%,#f7fafd 100%);padding:2rem 0}
-.teaser-inner{width:min(1180px,calc(100% - 40px));margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,360px);gap:2rem;align-items:center}
 .kicker{font-family:"IBM Plex Sans",sans-serif;font-size:.68rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:.24rem}
-.teaser h2,.section h2{font-family:"IBM Plex Sans",sans-serif;line-height:1.12;color:var(--ink);margin:0}
-.teaser h2{font-size:clamp(1.25rem,2vw,1.85rem);max-width:720px}
-.teaser p{font-size:.9rem;line-height:1.72;color:var(--muted);max-width:740px;margin:.55rem 0 0}
-.mini-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.7rem}
-.mini{min-height:92px;border:1px solid #dbe5ef;border-radius:8px;background:#fff;padding:.8rem .7rem;text-align:center;font-family:"IBM Plex Sans",sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:rgba(24,39,60,.04) 0 12px 28px}
-.mini strong{display:block;color:var(--ink);font-size:1.2rem;line-height:1.05}
-.mini span{display:block;color:#607086;font-size:.66rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;line-height:1.22;margin-top:.28rem;overflow-wrap:anywhere}
+.section h2{font-family:"IBM Plex Sans",sans-serif;line-height:1.12;color:var(--ink);margin:0}
 .section{width:100%;margin:0;padding:5rem 0;background:linear-gradient(rgba(255,255,255,.99),rgba(252,253,255,.99))}
 .section:nth-of-type(odd){background:linear-gradient(rgba(245,248,252,.99),rgba(239,243,248,.99))}
 .section.tight{padding-top:4.5rem}
@@ -164,9 +156,6 @@ footer{border-top:1px solid var(--line);background:#fff;padding:1.15rem 0;color:
   .hero-inner{width:min(100% - 28px,720px);padding:4.2rem 0 3rem}
   h1{font-size:clamp(2.2rem,12vw,3.45rem)}
   .proof-grid,.card-grid,.steps,.split,.trust,.license-strip,.pricing-actions,.license-layout{grid-template-columns:1fr}
-  .teaser{width:100%;padding:1.6rem 0}
-  .teaser-inner{width:min(100% - 28px,720px);grid-template-columns:1fr;gap:1rem}
-  .mini-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
   .section{width:100%;padding:2.2rem 0}
   .section > .section-head,.section > .card-grid,.section > .steps,.section > .split,.section > .faq-groups,.section > .license-strip,.section > .pricing-actions,.section > .license-layout{width:min(100% - 28px,720px)}
   #lizenz{padding:3.2rem 0}
@@ -195,12 +184,6 @@ footer{border-top:1px solid var(--line);background:#fff;padding:1.15rem 0;color:
   .proof{min-height:92px;padding:.55rem .45rem}
   .proof strong{font-size:.82rem;line-height:1.15}
   .proof span{font-size:.62rem;line-height:1.35}
-  .teaser{width:100%;padding:1.35rem 0}
-  .teaser-inner{width:calc(100% - 22px)}
-  .mini-grid{gap:.45rem}
-  .mini{min-height:82px;padding:.62rem .42rem}
-  .mini strong{font-size:1rem}
-  .mini span{font-size:.58rem}
   .cta-band{width:calc(100% - 22px)}
   .section > .section-head,.section > .card-grid,.section > .steps,.section > .split,.section > .faq-groups,.section > .license-strip,.section > .pricing-actions,.section > .license-layout{width:calc(100% - 22px)}
   .license-copy h2{font-size:clamp(2rem,10vw,2.85rem)}
@@ -268,22 +251,7 @@ footer{border-top:1px solid var(--line);background:#fff;padding:1.15rem 0;color:
     </div>
   </section>
 
-  <section class="teaser" id="funktionen" aria-label="Auf einen Blick">
-    <div class="teaser-inner">
-      <div>
-        <div class="kicker">Auf einen Blick</div>
-        <h2>Vom Vertragstext zur prüfbaren Entscheidungsgrundlage.</h2>
-        <p>SMART RISK führt durch Vorbereitung, Risikoanalyse, Fundstellen, Empfehlungen und druckbaren Ergebnisbericht. Trial, Kauf und Lizenzprüfung laufen über Nutzerkonto und Magic Link.</p>
-      </div>
-      <div class="mini-grid" aria-hidden="true">
-        <div class="mini"><strong>4</strong><span>Workflow-Schritte</span></div>
-        <div class="mini"><strong>3</strong><span>Parteien</span></div>
-        <div class="mini"><strong>1000</strong><span>Trial-Credits</span></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section tight" aria-label="Kernfunktionen">
+  <section class="section tight" id="funktionen" aria-label="Kernfunktionen">
     <div class="section-head">
       <div>
         <div class="kicker">Zentrale App-Funktionen</div>
