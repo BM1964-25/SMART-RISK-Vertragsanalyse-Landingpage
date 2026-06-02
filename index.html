@@ -29,11 +29,10 @@ html{scroll-behavior:smooth}
 body{margin:0;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink);line-height:1.5;overflow-x:hidden}
 a{color:inherit}
 .site-header{position:absolute;z-index:20;top:0;left:0;right:0;background:#f3f2ee;border-bottom:1px solid rgba(24,26,31,.08)}
-.header-inner{width:min(1180px,calc(100% - 40px));min-height:88px;margin:0 auto;display:grid;grid-template-columns:minmax(250px,1fr) auto auto;align-items:center;gap:1.8rem}
+.header-inner{width:min(1180px,calc(100% - 40px));min-height:88px;margin:0 auto;display:grid;grid-template-columns:minmax(360px,1fr) auto auto;align-items:center;gap:1.8rem}
 .brand{display:flex;align-items:center;gap:.78rem;min-width:0;text-decoration:none}
 .brand img{width:42px;height:42px;border-radius:10px;box-shadow:0 8px 20px rgba(37,99,235,.16);flex:0 0 auto}
-.brand strong{display:block;font-family:"IBM Plex Sans",sans-serif;font-size:.8rem;font-weight:800;line-height:1.15;white-space:nowrap}
-.brand span{display:block;font-size:.66rem;font-weight:700;color:#607086;margin-top:.1rem;white-space:nowrap}
+.brand strong{display:block;font-family:"IBM Plex Sans",sans-serif;font-size:1rem;font-weight:800;line-height:1.12;white-space:nowrap;color:#1c314c}
 .nav{display:flex;align-items:center;gap:1.35rem;font-family:"IBM Plex Sans",sans-serif;font-size:.76rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:#526273}
 .nav a{text-decoration:none}
 .nav a:hover{color:var(--teal)}
@@ -185,10 +184,9 @@ footer{border-top:1px solid var(--line);background:#fff;padding:1.15rem 0;color:
 .footer-brand{display:flex;align-items:center;gap:.7rem;color:var(--ink);font-family:"IBM Plex Sans",sans-serif;font-weight:800}
 .footer-brand img{width:34px;height:34px;border-radius:8px}
 @media(max-width:900px){
-  .header-inner{width:min(100% - 28px,720px);min-height:68px}
+  .header-inner{width:min(100% - 28px,720px);min-height:68px;grid-template-columns:minmax(0,1fr) auto}
   .nav{display:none}
-  .brand strong{font-size:.74rem}
-  .brand span{display:none}
+  .brand strong{font-size:.9rem}
   .hero{min-height:calc(100svh - 28px);padding-top:68px;align-items:flex-end}
   .hero-bg{background-image:linear-gradient(90deg,rgba(7,29,52,.94) 0%,rgba(7,29,52,.82) 58%,rgba(7,29,52,.42) 100%),linear-gradient(180deg,rgba(7,29,52,.28) 0%,rgba(7,29,52,.28) 50%,rgba(7,29,52,.82) 100%),url("hero-screenshot.png");background-size:auto 100%;background-position:58% top}
   .hero-inner{width:min(100% - 28px,720px);padding:4.2rem 0 3rem}
@@ -217,7 +215,7 @@ footer{border-top:1px solid var(--line);background:#fff;padding:1.15rem 0;color:
   .header-inner{gap:.75rem;width:calc(100% - 22px)}
   .brand{gap:.55rem;max-width:220px}
   .brand img{width:38px;height:38px}
-  .brand strong{display:block;max-width:100%;overflow:hidden;text-overflow:ellipsis;font-size:.7rem}
+  .brand strong{display:block;max-width:100%;overflow:hidden;text-overflow:ellipsis;font-size:.82rem}
   .btn.dark{min-height:38px;padding:.54rem .72rem;font-size:.74rem}
   .hero-inner{width:calc(100% - 22px);padding:3.7rem 0 2.8rem}
   .pill{width:100%;font-size:.7rem;white-space:normal;border-radius:8px;align-items:flex-start}
@@ -252,10 +250,7 @@ footer{border-top:1px solid var(--line);background:#fff;padding:1.15rem 0;color:
   <div class="header-inner">
     <a class="brand" href="#top" aria-label="SMART RISK Vertragsanalyse">
       <img src="app-icon.png" alt="">
-      <span>
-        <strong>SMART RISK Vertragsanalyse</strong>
-        <span>BuiltSmart Hub</span>
-      </span>
+      <strong>SMART RISK Vertragsanalyse</strong>
     </a>
     <nav class="nav" aria-label="Navigation">
       <a href="#funktionen">Funktionen</a>
