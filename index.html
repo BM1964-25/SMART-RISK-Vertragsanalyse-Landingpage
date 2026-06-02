@@ -91,6 +91,13 @@ h1{font-family:"IBM Plex Sans",sans-serif;font-size:clamp(2.45rem,5vw,4.65rem);l
 .result-card .label{display:block;font-family:"IBM Plex Sans",sans-serif;font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin:1rem 0 .85rem}
 .result-card h3{font-size:1.35rem;line-height:1.08;letter-spacing:0;text-transform:none;margin-bottom:.8rem}
 .result-card p{font-size:.9rem;line-height:1.72;color:#44566b}
+.audience-section{background:#fff}
+.audience-grid{gap:1rem}
+.audience-card{position:relative;min-height:235px;padding:1.55rem;border-color:rgba(16,32,51,.1);background:linear-gradient(180deg,#fff 0%,#fbfcfe 100%)}
+.audience-card::before{content:"";position:absolute;left:1.55rem;right:1.55rem;top:1.35rem;height:1px;background:rgba(16,32,51,.14)}
+.audience-card .label{display:block;font-family:"IBM Plex Sans",sans-serif;font-size:.7rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin:1rem 0 .85rem}
+.audience-card h3{font-size:1.25rem;line-height:1.12;letter-spacing:0;text-transform:none;margin-bottom:.75rem}
+.audience-card p{font-size:.9rem;line-height:1.72;color:#46596d}
 .workflow-track{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.3rem;margin:2rem auto 1.45rem}
 .workflow-track::before{content:"";position:absolute;left:7%;right:7%;top:28px;height:2px;background:linear-gradient(90deg,#8db7e6,var(--teal));opacity:.75}
 .workflow-node{position:relative;z-index:1;text-align:center;font-family:"IBM Plex Sans",sans-serif;color:var(--ink)}
@@ -435,25 +442,29 @@ footer{border-top:1px solid var(--line);background:#fff;padding:1.15rem 0;color:
     </div>
   </section>
 
-  <section class="section" aria-label="Zielgruppe">
+  <section class="section audience-section" aria-label="Zielgruppe">
     <div class="section-head">
       <div>
-        <div class="kicker">Für wen</div>
-        <h2>Für alle, die Verträge strukturiert vorbereiten, prüfen oder besser verstehen wollen.</h2>
+        <div class="kicker">Zielgruppe</div>
+        <h2>Für Entscheider, die Vertragsrisiken früh erkennen und souverän steuern wollen.</h2>
       </div>
+      <p>SMART RISK unterstützt Rollen, die Verträge bewerten, Risiken priorisieren und belastbare Entscheidungsunterlagen für Freigabe, Nachverhandlung oder externe Prüfung benötigen.</p>
     </div>
-    <div class="card-grid">
-      <article class="card">
-        <h3>Unternehmen & Selbstständige</h3>
-        <p>Verträge schneller einschätzen, Risiken priorisieren und nächste Schritte nachvollziehbar festhalten.</p>
+    <div class="card-grid audience-grid">
+      <article class="card audience-card">
+        <span class="label">Geschäftsführung & Selbstständige</span>
+        <h3>Risikoentscheidungen schneller absichern</h3>
+        <p>Verträge vor Unterzeichnung strukturiert einschätzen, kritische Klauseln priorisieren und Entscheidungsrisiken nachvollziehbar dokumentieren.</p>
       </article>
-      <article class="card">
-        <h3>Projekt, Einkauf, Verwaltung</h3>
-        <p>Vorprüfungen strukturieren, Fundstellen sammeln und Entscheidungsvorlagen vorbereiten.</p>
+      <article class="card audience-card">
+        <span class="label">Einkauf, Projekt & Verwaltung</span>
+        <h3>Vorprüfung und Abstimmung professionalisieren</h3>
+        <p>Fundstellen, Prüfkategorien und Empfehlungen sauber vorbereiten, damit interne Reviews gezielter und schneller erfolgen können.</p>
       </article>
-      <article class="card">
-        <h3>BuiltSmart Hub</h3>
-        <p>Branding und Zugang sind auf BuiltSmart-AI / BuiltSmart Hub ausgerichtet. App-Key: smart-risk-vertragsanalyse.</p>
+      <article class="card audience-card">
+        <span class="label">Beratung & Fachverantwortliche</span>
+        <h3>Analyseergebnisse belastbar übergeben</h3>
+        <p>Ergebnisberichte, lokale Akten und strukturierte Exporte schaffen eine nachvollziehbare Grundlage für Nachverhandlung, Dokumentation und weitere Prüfung.</p>
       </article>
     </div>
   </section>
