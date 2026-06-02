@@ -73,7 +73,7 @@ h1{font-family:"IBM Plex Sans",sans-serif;font-size:clamp(2.45rem,5vw,4.65rem);l
 .section{width:100%;margin:0;padding:5rem 0;background:linear-gradient(rgba(255,255,255,.99),rgba(252,253,255,.99))}
 .section:nth-of-type(odd){background:linear-gradient(rgba(245,248,252,.99),rgba(239,243,248,.99))}
 .section.tight{padding-top:4.5rem}
-.section > .section-head,.section > .card-grid,.section > .steps,.section > .split,.section > .faq-groups,.section > .license-strip,.section > .pricing-actions{width:min(1180px,calc(100% - 40px));margin-left:auto;margin-right:auto}
+.section > .section-head,.section > .card-grid,.section > .steps,.section > .split,.section > .faq-groups,.section > .license-strip,.section > .pricing-actions,.section > .license-layout{width:min(1180px,calc(100% - 40px));margin-left:auto;margin-right:auto}
 .section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:1.4rem;margin-bottom:1.25rem}
 .section h2{font-size:clamp(1.45rem,2.4vw,2.15rem);max-width:740px}
 .section-head p{font-size:.9rem;line-height:1.7;color:var(--muted);max-width:430px;margin:0}
@@ -111,7 +111,7 @@ h1{font-family:"IBM Plex Sans",sans-serif;font-size:clamp(2.45rem,5vw,4.65rem);l
 .license-item span{display:block;font-size:.78rem;line-height:1.5;color:var(--muted)}
 .pricing-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem;margin-top:.9rem}
 .pricing-actions .btn{min-height:52px}
-#lizenz{background:linear-gradient(rgba(255,255,255,.03),rgba(255,255,255,0)),var(--navy);color:#fff}
+#lizenz{background:linear-gradient(rgba(255,255,255,.03),rgba(255,255,255,0)),var(--navy);color:#fff;padding:6rem 0}
 #lizenz .kicker{color:#9ee6dc}
 #lizenz h2,#lizenz .card h3{color:#fff}
 #lizenz .section-head p,#lizenz .card p{color:#d5e3f5}
@@ -119,6 +119,32 @@ h1{font-family:"IBM Plex Sans",sans-serif;font-size:clamp(2.45rem,5vw,4.65rem);l
 #lizenz .license-item strong{color:#fff;font-size:1.55rem}
 #lizenz .license-item span{color:#d5e3f5}
 #lizenz .pricing-actions .btn.primary{box-shadow:rgba(0,0,0,.16) 0 18px 34px}
+.license-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(420px,486px);gap:min(8vw,5.5rem);align-items:center}
+.license-copy h2{font-family:"IBM Plex Sans",sans-serif;font-size:clamp(2.2rem,4.1vw,3.65rem);line-height:1.03;letter-spacing:0;margin:0 0 1.05rem;max-width:560px;color:#fff}
+.license-copy p{font-size:.96rem;line-height:1.72;color:#d9e4f1;max-width:560px;margin:0 0 1.15rem}
+.license-copy p strong{color:#fff}
+.price-card{position:relative;border:1px solid rgba(216,226,240,.36);border-radius:8px;background:rgba(255,255,255,.14);box-shadow:rgba(0,0,0,.14) 0 28px 70px;padding:2rem;overflow:hidden}
+.price-card::before{content:"";position:absolute;inset:0;background:linear-gradient(145deg,rgba(255,255,255,.08),rgba(255,255,255,0) 54%);pointer-events:none}
+.price-card > *{position:relative}
+.price-top{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;margin-bottom:1.3rem}
+.price-label{display:block;font-family:"IBM Plex Sans",sans-serif;font-size:.72rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#c9d3df;margin-bottom:.2rem}
+.price-card h3{font-family:"IBM Plex Sans",sans-serif;font-size:1.8rem;line-height:1.08;margin:0;color:#fff}
+.price-seal{width:45px;height:45px;border:4px solid #9ee6dc;border-radius:999px;display:flex;align-items:center;justify-content:center;color:#9ee6dc;font-family:"IBM Plex Sans",sans-serif;font-size:1.25rem;font-weight:800;transform:rotate(-8deg);flex:0 0 auto}
+.price-main{display:flex;align-items:flex-end;gap:.85rem;margin-bottom:.45rem}
+.price-main strong{font-family:"IBM Plex Sans",sans-serif;font-size:clamp(3.8rem,5.8vw,4.8rem);line-height:.9;color:#fff;letter-spacing:0;white-space:nowrap}
+.price-main span{font-family:"IBM Plex Sans",sans-serif;font-size:.95rem;font-weight:800;color:#fff;margin-bottom:.72rem}
+.price-note{font-size:.76rem;line-height:1.45;color:#eef4fb;margin-bottom:1.1rem}
+.price-pills{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.5rem;margin-bottom:1rem}
+.price-pill{border:1px solid rgba(255,255,255,.26);border-radius:999px;background:rgba(255,255,255,.12);padding:.42rem .55rem;text-align:center;font-family:"IBM Plex Sans",sans-serif;font-size:.76rem;font-weight:800;color:#fff;white-space:nowrap}
+.price-facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.55rem;margin-bottom:1rem}
+.price-fact{border:1px solid rgba(255,255,255,.14);border-radius:7px;background:rgba(7,26,51,.22);padding:.78rem .62rem;text-align:center}
+.price-fact strong{display:block;font-family:"IBM Plex Sans",sans-serif;font-size:.72rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#9ee6dc;margin-bottom:.28rem}
+.price-fact span{display:block;font-size:.84rem;line-height:1.35;color:#fff}
+.ai-box{border:1px solid rgba(13,148,136,.28);border-radius:14px;background:rgba(7,26,51,.58);padding:1rem;text-align:center;margin:1.15rem 0}
+.ai-box strong{display:block;font-family:"IBM Plex Sans",sans-serif;font-size:.78rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#9ee6dc;margin-bottom:.45rem}
+.ai-box span{display:block;color:#fff;font-size:.88rem;line-height:1.5}
+.price-card .btn{width:100%;min-height:52px}
+.price-footer{font-family:"IBM Plex Sans",sans-serif;font-size:.78rem;font-weight:700;color:#c8d3df;text-align:center;margin-top:1rem}
 .cta-band{width:min(1180px,calc(100% - 40px));margin:1rem auto 3.5rem;border:1px solid #cfe0f5;border-radius:8px;background:var(--navy);color:#fff;padding:1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1.2rem}
 .cta-band h2{font-family:"IBM Plex Sans",sans-serif;font-size:1.45rem;line-height:1.2;margin:0 0 .28rem;color:#fff}
 .cta-band p{font-size:.88rem;line-height:1.65;color:#d5e3f5;max-width:690px;margin:0}
@@ -135,11 +161,14 @@ footer{border-top:1px solid var(--line);background:#fff;padding:1.15rem 0;color:
   .hero-bg{background-image:linear-gradient(90deg,rgba(7,29,52,.94) 0%,rgba(7,29,52,.82) 58%,rgba(7,29,52,.42) 100%),linear-gradient(180deg,rgba(7,29,52,.28) 0%,rgba(7,29,52,.28) 50%,rgba(7,29,52,.82) 100%),url("hero-screenshot.png");background-size:auto 100%;background-position:58% top}
   .hero-inner{width:min(100% - 28px,720px);padding:4.2rem 0 3rem}
   h1{font-size:clamp(2.2rem,12vw,3.45rem)}
-  .proof-grid,.card-grid,.steps,.split,.trust,.license-strip,.pricing-actions{grid-template-columns:1fr}
+  .proof-grid,.card-grid,.steps,.split,.trust,.license-strip,.pricing-actions,.license-layout{grid-template-columns:1fr}
   .teaser{width:min(100% - 28px,720px);grid-template-columns:1fr;margin-top:-28px}
   .mini-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
   .section{width:100%;padding:2.2rem 0}
-  .section > .section-head,.section > .card-grid,.section > .steps,.section > .split,.section > .faq-groups,.section > .license-strip,.section > .pricing-actions{width:min(100% - 28px,720px)}
+  .section > .section-head,.section > .card-grid,.section > .steps,.section > .split,.section > .faq-groups,.section > .license-strip,.section > .pricing-actions,.section > .license-layout{width:min(100% - 28px,720px)}
+  #lizenz{padding:3.2rem 0}
+  .license-layout{gap:2rem}
+  .price-card{padding:1.35rem}
   .section-head{display:block}
   .section-head p{margin-top:.55rem;max-width:none}
   .cta-band{width:min(100% - 28px,720px);display:block;padding:1.2rem}
@@ -164,7 +193,14 @@ footer{border-top:1px solid var(--line);background:#fff;padding:1.15rem 0;color:
   .proof strong{font-size:.82rem;line-height:1.15}
   .proof span{font-size:.62rem;line-height:1.35}
   .teaser,.cta-band{width:calc(100% - 22px)}
-  .section > .section-head,.section > .card-grid,.section > .steps,.section > .split,.section > .faq-groups,.section > .license-strip,.section > .pricing-actions{width:calc(100% - 22px)}
+  .section > .section-head,.section > .card-grid,.section > .steps,.section > .split,.section > .faq-groups,.section > .license-strip,.section > .pricing-actions,.section > .license-layout{width:calc(100% - 22px)}
+  .license-copy h2{font-size:clamp(2rem,10vw,2.85rem)}
+  .license-copy p{font-size:.9rem}
+  .price-main{display:block}
+  .price-main strong{font-size:3.7rem}
+  .price-main span{display:block;margin:.35rem 0 0}
+  .price-pills,.price-facts{grid-template-columns:1fr}
+  .price-pill{text-align:left;border-radius:8px}
   .mini-grid{display:none}
 }
 </style>
@@ -335,34 +371,42 @@ footer{border-top:1px solid var(--line);background:#fff;padding:1.15rem 0;color:
   </section>
 
   <section class="section" id="lizenz" aria-label="Lizenzmodell">
-    <div class="section-head">
-      <div>
+    <div class="license-layout">
+      <div class="license-copy">
         <div class="kicker">Lizenzmodell</div>
-        <h2>3 Tage Trial, danach Jahreslizenz mit persönlichem Nutzerzugriff.</h2>
+        <h2>Eine Jahreslizenz für professionelle Vertragsprüfung.</h2>
+        <p>Für Unternehmen, Selbstständige, Projektverantwortliche und Verwaltungen, die Vertragstexte strukturiert prüfen, Risiken besser einordnen und Ergebnisse nachvollziehbar dokumentieren möchten.</p>
+        <p><strong>Für Trial, Kauf, Lizenzprüfung und BuiltSmart AI Credits ist ein Nutzerkonto mit Magic Link erforderlich.</strong> Pro Lizenz ist ein persönlicher Nutzerzugriff vorgesehen; mehrere Lizenzen derselben App können über die Menge im Checkout gekauft werden.</p>
       </div>
-      <p>Für Trial, Kauf, Lizenzprüfung und BuiltSmart AI Credits ist ein Nutzerkonto erforderlich. Der Login erfolgt per Magic Link.</p>
-    </div>
-    <div class="license-strip">
-      <div class="license-item"><strong>3 Tage</strong><span>Kostenlos testen mit vollem App-Zugriff und 1000 app-spezifischen Trial-Credits.</span></div>
-      <div class="license-item"><strong>499 EUR netto</strong><span>Jahreslizenz pro App und Jahr. Laufzeit 12 Monate, automatische Verlängerung um weitere 12 Monate.</span></div>
-      <div class="license-item"><strong>1 Monat</strong><span>Kündigung bis 1 Monat vor Ablauf. Mehrere Lizenzen derselben App können über die Menge im Checkout gekauft werden.</span></div>
-    </div>
-    <div class="pricing-actions">
-      <a class="btn primary" href="https://github.com/BM1964-25/SMART-RISK-Vertragsanalyse" target="_blank" rel="noopener">Jahreslizenz kaufen →</a>
-      <a class="btn secondary" href="https://github.com/BM1964-25/SMART-RISK-Vertragsanalyse" target="_blank" rel="noopener">3 Tage kostenlos testen →</a>
-    </div>
-    <div class="card-grid" style="margin-top:.9rem">
-      <article class="card">
-        <h3>Persönlicher Nutzerzugriff</h3>
-        <p>Pro Lizenz ist ein persönlicher Nutzerzugriff vorgesehen. Ein Checkout gilt jeweils für eine App.</p>
-      </article>
-      <article class="card">
-        <h3>KI-Nutzung separat</h3>
-        <p>Die Jahreslizenz enthält den App-Zugang. KI-Aktionen werden separat über BuiltSmart AI Credits oder einen eigenen Anthropic API Key genutzt.</p>
-      </article>
-      <article class="card">
-        <h3>Getrennte Nutzerzugriffe</h3>
-        <p>Mehrere Lizenzen bedeuten mehrere getrennte persönliche Nutzerzugriffe, nicht einen gemeinsamen Team- oder Projektbereich.</p>
+      <article class="price-card" aria-label="Jahreslizenz SMART RISK Vertragsanalyse">
+        <div class="price-top">
+          <div>
+            <span class="price-label">Professional</span>
+            <h3>Jahreslizenz</h3>
+          </div>
+          <div class="price-seal" aria-hidden="true">✓</div>
+        </div>
+        <div class="price-main">
+          <strong>499 €</strong>
+          <span>pro Jahr zzgl. 19% MwSt.</span>
+        </div>
+        <div class="price-note">593,81 € inkl. MwSt.<br>Entspricht 499 € netto / 41,58 € netto pro Monat.</div>
+        <div class="price-pills" aria-label="Lizenzmerkmale">
+          <div class="price-pill">12 Monate Laufzeit</div>
+          <div class="price-pill">3 Tage Trial</div>
+          <div class="price-pill">1 Nutzerzugriff</div>
+        </div>
+        <div class="price-facts">
+          <div class="price-fact"><strong>Verlängerung</strong><span>Automatisch um 12 Monate</span></div>
+          <div class="price-fact"><strong>Kündigung</strong><span>1 Monat vor Ablauf</span></div>
+          <div class="price-fact"><strong>Zahlung</strong><span>Sichere Online-Zahlung</span></div>
+        </div>
+        <div class="ai-box">
+          <strong>KI-Nutzung</strong>
+          <span>BuiltSmart AI Credits oder eigener Anthropic API Key.<br>In der Testphase 1000 Credits kostenlos.</span>
+        </div>
+        <a class="btn primary" href="https://github.com/BM1964-25/SMART-RISK-Vertragsanalyse" target="_blank" rel="noopener">Jahreslizenz kaufen →</a>
+        <div class="price-footer">Jahreslizenz | Magic Link | persönlicher Nutzerzugriff</div>
       </article>
     </div>
   </section>
