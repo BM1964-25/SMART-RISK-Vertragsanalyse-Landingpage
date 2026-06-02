@@ -107,7 +107,7 @@ h1{font-family:"IBM Plex Sans",sans-serif;font-size:clamp(2.45rem,5vw,4.65rem);l
 .step{min-height:194px;text-align:center;padding:2.05rem 1.25rem}
 .step::before{display:none}
 .step h3{font-size:1rem;line-height:1.25;margin-bottom:.75rem;text-transform:none;letter-spacing:0}
-.step p{font-size:.9rem;line-height:1.68}
+.step p{font-size:.9rem;line-height:1.68;max-width:210px;margin:0 auto}
 .split{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(300px,.95fr);gap:1rem;align-items:stretch}
 .notice-single{grid-template-columns:1fr}
 .list{display:grid;gap:.58rem;margin:0;padding:0}
@@ -221,6 +221,7 @@ footer{border-top:1px solid var(--line);background:#fff;padding:1.15rem 0;color:
   .section > .section-head,.section > .card-grid,.section > .steps,.section > .workflow-track,.section > .split,.section > .faq-groups,.section > .license-strip,.section > .pricing-actions,.section > .license-layout{width:calc(100% - 22px)}
   .section h2{font-size:clamp(1.85rem,10vw,2.55rem)}
   .step{text-align:left;min-height:auto;padding:1.35rem}
+  .step p{max-width:none;margin:0}
   .license-copy h2{font-size:clamp(2rem,10vw,2.85rem)}
   .license-copy p{font-size:.9rem}
   .price-main{display:block}
@@ -329,19 +330,19 @@ footer{border-top:1px solid var(--line);background:#fff;padding:1.15rem 0;color:
     <div class="steps">
       <article class="step">
         <h3>Vertrag erfassen</h3>
-        <p>Vertrag hochladen oder Text einfügen und die relevante Vertragspartei für die Prüfung festlegen.</p>
+        <p>Vertrag hochladen, Text einfügen und die relevante Vertragspartei für die weitere Prüfung sauber festlegen.</p>
       </article>
       <article class="step">
         <h3>Prüfung steuern</h3>
-        <p>Vertragstyp und Prüfkategorien bestimmen, damit die Analyse mit klarem fachlichem Fokus startet.</p>
+        <p>Vertragstyp, Prüfkategorien und Analysefokus bestimmen, damit die Bewertung fachlich präzise startet.</p>
       </article>
       <article class="step">
         <h3>Risiken bewerten</h3>
-        <p>Risiko-Score, Fundliste, Schweregrade und Empfehlungen strukturiert auswerten.</p>
+        <p>Risiko-Score, Fundstellen, Schweregrade und Empfehlungen systematisch prüfen und priorisiert einordnen.</p>
       </article>
       <article class="step">
         <h3>Bericht nutzen</h3>
-        <p>Ergebnisbericht erstellen, lokale Akte sichern und Inhalte per JSON exportieren oder importieren.</p>
+        <p>Ergebnisbericht erstellen, lokale Akte sichern und Analyseinhalte per JSON strukturiert weiterverwenden.</p>
       </article>
     </div>
   </section>
