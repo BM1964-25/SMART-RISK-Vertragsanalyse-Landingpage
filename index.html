@@ -66,7 +66,7 @@ h1{font-family:"IBM Plex Sans",sans-serif;font-size:clamp(2.45rem,5vw,4.65rem);l
 .section{width:100%;margin:0;padding:5rem 0;background:linear-gradient(rgba(255,255,255,.99),rgba(252,253,255,.99))}
 .section:nth-of-type(odd){background:linear-gradient(rgba(245,248,252,.99),rgba(239,243,248,.99))}
 .section.tight{padding-top:4.5rem}
-.section > .section-head,.section > .card-grid,.section > .steps,.section > .split,.section > .faq-groups,.section > .license-strip,.section > .pricing-actions,.section > .license-layout{width:min(1180px,calc(100% - 40px));margin-left:auto;margin-right:auto}
+.section > .section-head,.section > .card-grid,.section > .steps,.section > .workflow-track,.section > .split,.section > .faq-groups,.section > .license-strip,.section > .pricing-actions,.section > .license-layout{width:min(1180px,calc(100% - 40px));margin-left:auto;margin-right:auto}
 .section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:1.4rem;margin-bottom:1.25rem}
 .section h2{font-size:clamp(1.45rem,2.4vw,2.15rem);max-width:740px}
 .section-head p{font-size:.9rem;line-height:1.7;color:var(--muted);max-width:430px;margin:0}
@@ -84,10 +84,16 @@ h1{font-family:"IBM Plex Sans",sans-serif;font-size:clamp(2.45rem,5vw,4.65rem);l
 .feature-card .num{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:999px;background:#0e2138;color:#fff;font-family:"IBM Plex Sans",sans-serif;font-size:.78rem;font-weight:800;margin-bottom:1rem}
 .feature-card h3{font-size:.94rem;line-height:1.25;margin-bottom:.65rem}
 .feature-card p{font-size:.86rem;line-height:1.7;color:#4a5b6e}
-.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.8rem;counter-reset:step}
-.step{min-height:190px}
-.step::before{counter-increment:step;content:counter(step);width:30px;height:30px;border-radius:999px;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;font-family:"IBM Plex Sans",sans-serif;font-weight:800;font-size:.82rem;margin-bottom:.75rem}
-.step h3{font-size:.92rem;line-height:1.25}
+.workflow-track{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.3rem;margin:2rem auto 1.45rem}
+.workflow-track::before{content:"";position:absolute;left:7%;right:7%;top:28px;height:2px;background:linear-gradient(90deg,#8db7e6,var(--teal));opacity:.75}
+.workflow-node{position:relative;z-index:1;text-align:center;font-family:"IBM Plex Sans",sans-serif;color:var(--ink)}
+.workflow-node strong{width:58px;height:58px;margin:0 auto .8rem;border-radius:999px;background:#fff;border:1px solid #cfddeb;display:flex;align-items:center;justify-content:center;color:#0f5fa8;font-size:1rem;font-weight:800;box-shadow:rgba(24,39,60,.06) 0 12px 24px}
+.workflow-node span{display:block;font-size:.9rem;font-weight:800}
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.3rem}
+.step{min-height:194px;text-align:center;padding:2.05rem 1.25rem}
+.step::before{display:none}
+.step h3{font-size:1rem;line-height:1.25;margin-bottom:.75rem;text-transform:none;letter-spacing:0}
+.step p{font-size:.9rem;line-height:1.68}
 .split{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(300px,.95fr);gap:1rem;align-items:stretch}
 .list{display:grid;gap:.58rem;margin:0;padding:0}
 .list li{display:grid;grid-template-columns:18px minmax(0,1fr);gap:.55rem;align-items:start;list-style:none;font-size:.82rem;line-height:1.55;color:var(--muted)}
@@ -161,9 +167,13 @@ footer{border-top:1px solid var(--line);background:#fff;padding:1.15rem 0;color:
   .hero-bg{background-image:linear-gradient(90deg,rgba(7,29,52,.94) 0%,rgba(7,29,52,.82) 58%,rgba(7,29,52,.42) 100%),linear-gradient(180deg,rgba(7,29,52,.28) 0%,rgba(7,29,52,.28) 50%,rgba(7,29,52,.82) 100%),url("hero-screenshot.png");background-size:auto 100%;background-position:58% top}
   .hero-inner{width:min(100% - 28px,720px);padding:4.2rem 0 3rem}
   h1{font-size:clamp(2.2rem,12vw,3.45rem)}
-  .proof-grid,.card-grid,.steps,.split,.trust,.license-strip,.pricing-actions,.license-layout{grid-template-columns:1fr}
+  .proof-grid,.card-grid,.steps,.workflow-track,.split,.trust,.license-strip,.pricing-actions,.license-layout{grid-template-columns:1fr}
+  .workflow-track{gap:.85rem;margin:1.4rem auto 1rem}
+  .workflow-track::before{display:none}
+  .workflow-node{display:grid;grid-template-columns:58px minmax(0,1fr);align-items:center;text-align:left;gap:.85rem}
+  .workflow-node strong{margin:0}
   .section{width:100%;padding:2.2rem 0}
-  .section > .section-head,.section > .card-grid,.section > .steps,.section > .split,.section > .faq-groups,.section > .license-strip,.section > .pricing-actions,.section > .license-layout{width:min(100% - 28px,720px)}
+  .section > .section-head,.section > .card-grid,.section > .steps,.section > .workflow-track,.section > .split,.section > .faq-groups,.section > .license-strip,.section > .pricing-actions,.section > .license-layout{width:min(100% - 28px,720px)}
   #lizenz{padding:3.2rem 0}
   .license-layout{gap:2rem}
   .price-card{padding:1.35rem}
@@ -191,7 +201,8 @@ footer{border-top:1px solid var(--line);background:#fff;padding:1.15rem 0;color:
   .proof strong{font-size:.82rem;line-height:1.15}
   .proof span{font-size:.62rem;line-height:1.35}
   .cta-band{width:calc(100% - 22px)}
-  .section > .section-head,.section > .card-grid,.section > .steps,.section > .split,.section > .faq-groups,.section > .license-strip,.section > .pricing-actions,.section > .license-layout{width:calc(100% - 22px)}
+  .section > .section-head,.section > .card-grid,.section > .steps,.section > .workflow-track,.section > .split,.section > .faq-groups,.section > .license-strip,.section > .pricing-actions,.section > .license-layout{width:calc(100% - 22px)}
+  .step{text-align:left;min-height:auto;padding:1.35rem}
   .license-copy h2{font-size:clamp(2rem,10vw,2.85rem)}
   .license-copy p{font-size:.9rem}
   .price-main{display:block}
@@ -291,22 +302,28 @@ footer{border-top:1px solid var(--line);background:#fff;padding:1.15rem 0;color:
         <h2>Vier Schritte vom Vertrag zur Entscheidungsvorlage.</h2>
       </div>
     </div>
+    <div class="workflow-track" aria-label="Workflow-Stationen">
+      <div class="workflow-node"><strong>01</strong><span>Vorbereitung</span></div>
+      <div class="workflow-node"><strong>02</strong><span>Steuerung</span></div>
+      <div class="workflow-node"><strong>03</strong><span>Analyse</span></div>
+      <div class="workflow-node"><strong>04</strong><span>Ergebnis</span></div>
+    </div>
     <div class="steps">
       <article class="step">
-        <h3>Vertrag vorbereiten</h3>
-        <p>Prüfperspektive festlegen, Dokument hochladen oder Vertragstext direkt einfügen.</p>
+        <h3>Vertrag erfassen</h3>
+        <p>Vertrag hochladen oder Text einfügen und die relevante Vertragspartei für die Prüfung festlegen.</p>
       </article>
       <article class="step">
-        <h3>Analyse starten</h3>
-        <p>Vertragstyp und Prüfkategorien ermitteln und die KI-gestützte Risikoanalyse ausführen.</p>
+        <h3>Prüfung steuern</h3>
+        <p>Vertragstyp und Prüfkategorien bestimmen, damit die Analyse mit klarem fachlichem Fokus startet.</p>
       </article>
       <article class="step">
-        <h3>Ergebnisse prüfen</h3>
-        <p>Dashboard mit Risiko-Score, Fundliste mit einzelnen Risiken und Empfehlungen auswerten.</p>
+        <h3>Risiken bewerten</h3>
+        <p>Risiko-Score, Fundliste, Schweregrade und Empfehlungen strukturiert auswerten.</p>
       </article>
       <article class="step">
-        <h3>Bericht erstellen</h3>
-        <p>Analyse als lokale Akte speichern und einen druckbaren HTML-/Print-Bericht erzeugen.</p>
+        <h3>Bericht nutzen</h3>
+        <p>Ergebnisbericht erstellen, lokale Akte sichern und Inhalte per JSON exportieren oder importieren.</p>
       </article>
     </div>
   </section>
