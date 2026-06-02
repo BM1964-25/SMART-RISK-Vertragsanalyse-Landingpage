@@ -109,11 +109,10 @@ h1{font-family:"IBM Plex Sans",sans-serif;font-size:clamp(2.45rem,5vw,4.65rem);l
 .step h3{font-size:1rem;line-height:1.25;margin-bottom:.75rem;text-transform:none;letter-spacing:0}
 .step p{font-size:.9rem;line-height:1.68}
 .split{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(300px,.95fr);gap:1rem;align-items:stretch}
+.notice-single{grid-template-columns:1fr}
 .list{display:grid;gap:.58rem;margin:0;padding:0}
 .list li{display:grid;grid-template-columns:18px minmax(0,1fr);gap:.55rem;align-items:start;list-style:none;font-size:.82rem;line-height:1.55;color:var(--muted)}
 .list li::before{content:"✓";width:18px;height:18px;border-radius:999px;background:#dcfce7;color:#047857;display:flex;align-items:center;justify-content:center;font-family:"IBM Plex Sans",sans-serif;font-size:.7rem;font-weight:800;margin-top:.08rem}
-.trust{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:.7rem}
-.trust-item{border:1px solid var(--line);border-radius:8px;background:#fff;padding:.85rem;text-align:center;font-family:"IBM Plex Sans",sans-serif;font-size:.76rem;font-weight:800;color:#334155}
 .faq-groups{display:grid;grid-template-columns:1fr;gap:1rem}
 .faq-group{border:1px solid var(--line);border-radius:8px;background:#fff;padding:1.05rem}
 .faq-group h3{font-family:"IBM Plex Sans",sans-serif;font-size:.9rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);margin:0 0 .75rem}
@@ -184,7 +183,7 @@ footer{border-top:1px solid var(--line);background:#fff;padding:1.15rem 0;color:
   .hero-bg{background-image:linear-gradient(90deg,rgba(7,29,52,.94) 0%,rgba(7,29,52,.82) 58%,rgba(7,29,52,.42) 100%),linear-gradient(180deg,rgba(7,29,52,.28) 0%,rgba(7,29,52,.28) 50%,rgba(7,29,52,.82) 100%),url("hero-screenshot.png");background-size:auto 100%;background-position:58% top}
   .hero-inner{width:min(100% - 28px,720px);padding:4.2rem 0 3rem}
   h1{font-size:clamp(2.2rem,12vw,3.45rem)}
-  .proof-grid,.card-grid,.steps,.workflow-track,.split,.trust,.license-strip,.pricing-actions,.license-layout{grid-template-columns:1fr}
+  .proof-grid,.card-grid,.steps,.workflow-track,.split,.license-strip,.pricing-actions,.license-layout{grid-template-columns:1fr}
   .workflow-track{gap:.85rem;margin:1.4rem auto 1rem}
   .workflow-track::before{display:none}
   .workflow-node{display:grid;grid-template-columns:58px minmax(0,1fr);align-items:center;text-align:left;gap:.85rem}
@@ -563,20 +562,10 @@ footer{border-top:1px solid var(--line);background:#fff;padding:1.15rem 0;color:
   </section>
 
   <section class="section" id="hinweis" aria-label="Hinweis">
-    <div class="split">
+    <div class="split notice-single">
       <div class="panel warn">
         <h3>Wichtiger Hinweis</h3>
         <p>SMART RISK Vertragsanalyse ist eine fachliche Arbeitshilfe. Die App ersetzt keine anwaltliche Beratung im Einzelfall, kein verbindliches Rechtsgutachten und keine gerichtsfeste Bewertung ohne Fachprüfung.</p>
-      </div>
-      <div class="panel">
-        <h3>Vertrauenselemente</h3>
-        <div class="trust">
-          <div class="trust-item">BuiltSmart-AI</div>
-          <div class="trust-item">Browserbasiert</div>
-          <div class="trust-item">Lokale Daten</div>
-          <div class="trust-item">Klarer Workflow</div>
-          <div class="trust-item">Print-Bericht</div>
-        </div>
       </div>
     </div>
   </section>
