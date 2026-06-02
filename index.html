@@ -91,6 +91,16 @@ h1{font-family:"IBM Plex Sans",sans-serif;font-size:clamp(2.45rem,5vw,4.65rem);l
 .result-card .label{display:block;font-family:"IBM Plex Sans",sans-serif;font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin:1rem 0 .85rem}
 .result-card h3{font-size:1.35rem;line-height:1.08;letter-spacing:0;text-transform:none;margin-bottom:.8rem}
 .result-card p{font-size:.9rem;line-height:1.72;color:#44566b}
+.access-section{background:linear-gradient(180deg,#edf5fc 0%,#e8f1f9 100%)}
+.access-layout{width:min(1180px,calc(100% - 40px));margin:0 auto;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(360px,.85fr);gap:min(6vw,4.6rem);align-items:center}
+.access-copy h2{font-family:"IBM Plex Sans",sans-serif;font-size:clamp(2.35rem,4.8vw,4.25rem);line-height:1.05;letter-spacing:0;margin:0 0 1.35rem;color:var(--ink);max-width:680px}
+.access-copy p{font-size:1rem;line-height:1.72;color:#50637a;max-width:660px;margin:0}
+.access-cards{display:grid;gap:1rem}
+.access-card{display:grid;grid-template-columns:34px minmax(0,1fr);gap:1rem;align-items:start;border:1px solid rgba(16,32,51,.1);border-radius:8px;background:#fff;padding:1.35rem 1.45rem;box-shadow:rgba(24,39,60,.06) 0 18px 42px}
+.access-dot{width:22px;height:22px;border-radius:999px;background:#e9f3ff;position:relative;margin-top:.16rem}
+.access-dot::after{content:"";position:absolute;inset:7px;border-radius:999px;background:#0f65b4}
+.access-card h3{font-family:"IBM Plex Sans",sans-serif;font-size:1.05rem;line-height:1.2;color:var(--ink);margin:0 0 .28rem}
+.access-card p{font-size:.92rem;line-height:1.6;color:#5a6b80;margin:0}
 .audience-section{background:#fff}
 .audience-grid{gap:1rem}
 .audience-card{position:relative;min-height:235px;padding:1.55rem;border-color:rgba(16,32,51,.1);background:linear-gradient(180deg,#fff 0%,#fbfcfe 100%)}
@@ -183,13 +193,15 @@ footer{border-top:1px solid var(--line);background:#fff;padding:1.15rem 0;color:
   .hero-bg{background-image:linear-gradient(90deg,rgba(7,29,52,.94) 0%,rgba(7,29,52,.82) 58%,rgba(7,29,52,.42) 100%),linear-gradient(180deg,rgba(7,29,52,.28) 0%,rgba(7,29,52,.28) 50%,rgba(7,29,52,.82) 100%),url("hero-screenshot.png");background-size:auto 100%;background-position:58% top}
   .hero-inner{width:min(100% - 28px,720px);padding:4.2rem 0 3rem}
   h1{font-size:clamp(2.2rem,12vw,3.45rem)}
-  .proof-grid,.card-grid,.steps,.workflow-track,.split,.license-strip,.pricing-actions,.license-layout{grid-template-columns:1fr}
+  .proof-grid,.card-grid,.steps,.workflow-track,.split,.access-layout,.license-strip,.pricing-actions,.license-layout{grid-template-columns:1fr}
   .workflow-track{gap:.85rem;margin:1.4rem auto 1rem}
   .workflow-track::before{display:none}
   .workflow-node{display:grid;grid-template-columns:58px minmax(0,1fr);align-items:center;text-align:left;gap:.85rem}
   .workflow-node strong{margin:0}
   .section{width:100%;padding:2.2rem 0}
   .section > .section-head,.section > .card-grid,.section > .steps,.section > .workflow-track,.section > .split,.section > .faq-groups,.section > .license-strip,.section > .pricing-actions,.section > .license-layout{width:min(100% - 28px,720px)}
+  .access-layout{width:min(100% - 28px,720px);gap:1.5rem}
+  .access-copy h2{font-size:clamp(2rem,8vw,3rem)}
   #lizenz{padding:3.2rem 0}
   .license-layout{gap:2rem}
   .price-card{padding:1.35rem}
@@ -219,6 +231,9 @@ footer{border-top:1px solid var(--line);background:#fff;padding:1.15rem 0;color:
   .proof span{font-size:.62rem;line-height:1.35}
   .cta-band{width:calc(100% - 22px)}
   .section > .section-head,.section > .card-grid,.section > .steps,.section > .workflow-track,.section > .split,.section > .faq-groups,.section > .license-strip,.section > .pricing-actions,.section > .license-layout{width:calc(100% - 22px)}
+  .access-layout{width:calc(100% - 22px)}
+  .access-card{grid-template-columns:24px minmax(0,1fr);padding:1.15rem}
+  .access-copy p,.access-card p{font-size:.88rem}
   .section h2{font-size:clamp(1.85rem,10vw,2.55rem)}
   .step{text-align:left;min-height:auto;padding:1.35rem}
   .step p{max-width:none;margin:0}
@@ -378,6 +393,39 @@ footer{border-top:1px solid var(--line);background:#fff;padding:1.15rem 0;color:
       <div class="panel warn">
         <h3>Wichtiger Hinweis</h3>
         <p>SMART RISK Vertragsanalyse ist eine fachliche Arbeitshilfe. Die App ersetzt keine anwaltliche Beratung im Einzelfall, kein verbindliches Rechtsgutachten und keine gerichtsfeste Bewertung ohne Fachprüfung.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section access-section" aria-label="Zugang, KI-Nutzung und Datenkontrolle">
+    <div class="access-layout">
+      <div class="access-copy">
+        <div class="kicker">Zugang & Kontrolle</div>
+        <h2>Klarer Zugriff. Transparente KI-Nutzung. Lokale Arbeitsstände.</h2>
+        <p>Trial, Kauf und Lizenzprüfung laufen über ein persönliches Nutzerkonto mit Magic Link. KI-Aktionen werden über BuiltSmart AI Credits oder optional über einen eigenen Anthropic API Key genutzt; App-Inhalte bleiben lokal im Browser, soweit sie gespeichert werden.</p>
+      </div>
+      <div class="access-cards" aria-label="Entscheidungshilfe vor dem Preis">
+        <article class="access-card">
+          <span class="access-dot" aria-hidden="true"></span>
+          <div>
+            <h3>Nutzerkonto</h3>
+            <p>Magic Link für Trial, Kauf, Lizenzprüfung und BuiltSmart AI Credits.</p>
+          </div>
+        </article>
+        <article class="access-card">
+          <span class="access-dot" aria-hidden="true"></span>
+          <div>
+            <h3>KI-Nutzung</h3>
+            <p>BuiltSmart AI Credits oder eigener Anthropic API Key mit direkter Anthropic-Abrechnung.</p>
+          </div>
+        </article>
+        <article class="access-card">
+          <span class="access-dot" aria-hidden="true"></span>
+          <div>
+            <h3>Lokale Inhalte</h3>
+            <p>App-Inhalte bleiben lokal im Browser; gespeicherte Arbeitsstände können per JSON exportiert und importiert werden.</p>
+          </div>
+        </article>
       </div>
     </div>
   </section>
