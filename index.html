@@ -10,14 +10,14 @@
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --navy:#071d34;
-  --blue:#123a5d;
+  --navy:#071a33;
+  --blue:#132033;
   --teal:#0d9488;
   --teal-soft:#e6faf6;
   --ink:#102033;
   --muted:#526273;
   --line:#d7e3f0;
-  --bg:#f3f6fa;
+  --bg:#f3f2ee;
   --card:#fff;
   --red:#dc2626;
   --amber:#d97706;
@@ -28,8 +28,8 @@
 html{scroll-behavior:smooth}
 body{margin:0;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink);line-height:1.5;overflow-x:hidden}
 a{color:inherit}
-.site-header{position:absolute;z-index:20;top:0;left:0;right:0;background:rgba(248,251,255,.94);border-bottom:1px solid rgba(210,222,234,.86);backdrop-filter:blur(14px)}
-.header-inner{width:min(1160px,calc(100% - 40px));min-height:74px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:1.2rem}
+.site-header{position:absolute;z-index:20;top:0;left:0;right:0;background:#f3f2ee;border-bottom:1px solid rgba(24,26,31,.08)}
+.header-inner{width:min(1180px,calc(100% - 40px));min-height:88px;margin:0 auto;display:grid;grid-template-columns:minmax(250px,1fr) auto auto;align-items:center;gap:1.8rem}
 .brand{display:flex;align-items:center;gap:.78rem;min-width:0;text-decoration:none}
 .brand img{width:42px;height:42px;border-radius:10px;box-shadow:0 8px 20px rgba(37,99,235,.16);flex:0 0 auto}
 .brand strong{display:block;font-family:"IBM Plex Sans",sans-serif;font-size:.8rem;font-weight:800;line-height:1.15;white-space:nowrap}
@@ -37,28 +37,30 @@ a{color:inherit}
 .nav{display:flex;align-items:center;gap:1.35rem;font-family:"IBM Plex Sans",sans-serif;font-size:.76rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:#526273}
 .nav a{text-decoration:none}
 .nav a:hover{color:var(--teal)}
-.btn{min-height:42px;border:1px solid transparent;border-radius:7px;padding:.64rem 1rem;display:inline-flex;align-items:center;justify-content:center;gap:.45rem;font-family:"IBM Plex Sans",sans-serif;font-size:.82rem;font-weight:800;text-decoration:none;white-space:nowrap;cursor:pointer}
-.btn.primary{background:var(--teal);border-color:var(--teal);color:#fff;box-shadow:0 14px 30px rgba(13,148,136,.22)}
-.btn.primary:hover{background:#0f766e;border-color:#0f766e}
-.btn.dark{background:var(--navy);color:#fff;box-shadow:0 10px 22px rgba(7,29,52,.18)}
-.btn.dark:hover{background:var(--blue)}
-.btn.secondary{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.42);color:#fff}
+.btn{min-height:50px;border:1px solid transparent;border-radius:12px;padding:.76rem 1.25rem;display:inline-flex;align-items:center;justify-content:center;gap:.55rem;font-family:"IBM Plex Sans",sans-serif;font-size:.88rem;font-weight:800;text-decoration:none;white-space:nowrap;cursor:pointer}
+.btn.primary{background:#fff;border-color:#fff;color:#181a1f;box-shadow:rgba(0,0,0,.12) 0 16px 42px}
+.btn.primary:hover{background:#f7f7f5;border-color:#f7f7f5}
+.btn.dark{background:#151515;color:#fff;border-color:#151515;border-radius:13px;box-shadow:none;min-height:50px;padding:.78rem 1.45rem}
+.btn.dark:hover{background:#2a2a2a;border-color:#2a2a2a}
+.btn.secondary{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.28);color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.12)}
 .btn.light{background:#fff;color:var(--navy);border-color:#fff}
-.hero{position:relative;min-height:calc(100vh - 34px);min-height:calc(100dvh - 34px);display:flex;align-items:center;overflow:hidden;background:var(--navy);padding-top:74px}
-.hero-bg{position:absolute;inset:0;background-image:linear-gradient(90deg,rgba(7,29,52,.96) 0%,rgba(7,29,52,.88) 27%,rgba(7,29,52,.58) 52%,rgba(7,29,52,.18) 76%,rgba(7,29,52,.04) 100%),linear-gradient(180deg,rgba(7,29,52,.34) 0%,rgba(7,29,52,.05) 45%,rgba(7,29,52,.42) 100%),url("hero-screenshot.png");background-size:cover;background-position:center top;background-repeat:no-repeat;transform:scale(1.01)}
+.hero{position:relative;min-height:850px;display:flex;align-items:center;overflow:hidden;background:var(--navy);padding-top:88px}
+.hero-bg{position:absolute;inset:0;background-image:linear-gradient(90deg,rgba(7,26,51,.98) 0%,rgba(7,26,51,.9) 30%,rgba(7,26,51,.54) 56%,rgba(7,26,51,.18) 100%),linear-gradient(180deg,rgba(7,26,51,.36) 0%,rgba(7,26,51,.06) 46%,rgba(7,26,51,.46) 100%),url("hero-screenshot.png");background-size:cover;background-position:center top;background-repeat:no-repeat;transform:scale(1.01)}
 .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:22%;background:linear-gradient(180deg,rgba(7,29,52,0),rgba(7,29,52,.78));pointer-events:none}
-.hero-inner{position:relative;z-index:1;width:min(1160px,calc(100% - 40px));margin:0 auto;padding:5.4rem 0 4.2rem}
+.hero-inner{position:relative;z-index:1;width:min(1180px,calc(100% - 40px));margin:0 auto;padding:5.4rem 0 4.2rem}
 .hero-copy{width:min(610px,100%);color:#fff}
 .eyebrow{font-family:"IBM Plex Sans",sans-serif;font-size:.72rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#9ee6dc;margin-bottom:1rem}
 .pill{width:max-content;max-width:100%;display:inline-flex;align-items:center;gap:.48rem;border:1px solid rgba(158,230,220,.42);border-radius:999px;background:rgba(13,148,136,.18);color:#d7fffb;font-family:"IBM Plex Sans",sans-serif;font-size:.76rem;font-weight:800;padding:.34rem .78rem;margin-bottom:1rem;box-shadow:0 12px 28px rgba(0,0,0,.12)}
 .pill svg{width:15px;height:15px;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;fill:none;flex:0 0 auto}
 h1{font-family:"IBM Plex Sans",sans-serif;font-size:clamp(2.45rem,5vw,4.65rem);line-height:.98;font-weight:800;letter-spacing:0;margin:0 0 1.1rem;color:#fff;overflow-wrap:break-word}
 .hero-copy p{font-size:clamp(1rem,1.35vw,1.18rem);line-height:1.72;color:#dce8f5;max-width:590px;margin:0}
-.hero-actions{display:flex;align-items:center;gap:.75rem;flex-wrap:wrap;margin-top:1.55rem}
-.proof-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem;margin-top:1.55rem;max-width:650px}
-.proof{min-width:0;min-height:92px;border:1px solid rgba(224,235,247,.22);border-radius:8px;background:rgba(9,31,55,.58);box-shadow:0 18px 38px rgba(0,0,0,.14);padding:.82rem .88rem;backdrop-filter:blur(10px)}
-.proof strong{display:block;font-family:"IBM Plex Sans",sans-serif;font-size:1.12rem;line-height:1.1;color:#fff;margin-bottom:.25rem}
-.proof span{display:block;font-size:.75rem;line-height:1.45;color:#c6d8e8}
+.hero-actions{display:grid;grid-template-columns:repeat(2,minmax(0,350px));align-items:center;gap:.75rem;flex-wrap:wrap;margin-top:1.7rem}
+.hero-actions .btn{width:100%;min-height:56px}
+.proof-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.9rem;margin-top:1.75rem;max-width:714px}
+.proof{position:relative;min-width:0;min-height:168px;border:1px solid rgba(255,255,255,.18);border-radius:8px;background:rgba(255,255,255,.13);box-shadow:none;padding:2.35rem 1.15rem 1.15rem;text-align:center;backdrop-filter:blur(10px)}
+.proof::before{content:"✓";position:absolute;top:1rem;left:50%;transform:translateX(-50%);font-family:"IBM Plex Sans",sans-serif;font-size:1.05rem;font-weight:800;color:#9ee6dc}
+.proof strong{display:block;font-family:"IBM Plex Sans",sans-serif;font-size:1.08rem;line-height:1.18;color:#fff;margin-bottom:.42rem}
+.proof span{display:block;font-size:.82rem;line-height:1.45;color:#eef4fb}
 .teaser{position:relative;z-index:3;margin:-34px auto 0;width:min(1160px,calc(100% - 40px));min-height:120px;border:1px solid var(--line);background:#fff;border-radius:8px 8px 0 0;padding:1.05rem 1.15rem;display:grid;grid-template-columns:1fr auto;gap:1rem;align-items:center;box-shadow:0 -10px 34px rgba(15,35,60,.08)}
 .kicker{font-family:"IBM Plex Sans",sans-serif;font-size:.68rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:.24rem}
 .teaser h2,.section h2{font-family:"IBM Plex Sans",sans-serif;line-height:1.12;color:var(--ink);margin:0}
@@ -68,13 +70,15 @@ h1{font-family:"IBM Plex Sans",sans-serif;font-size:clamp(2.45rem,5vw,4.65rem);l
 .mini{border:1px solid #dbe5ef;border-radius:7px;background:#f8fbff;padding:.58rem .62rem;text-align:center;font-family:"IBM Plex Sans",sans-serif}
 .mini strong{display:block;color:var(--ink);font-size:.94rem;line-height:1.1}
 .mini span{display:block;color:#607086;font-size:.62rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;margin-top:.18rem}
-.section{width:min(1160px,calc(100% - 40px));margin:0 auto;padding:3rem 0}
-.section.tight{padding-top:1.2rem}
+.section{width:100%;margin:0;padding:5rem 0;background:linear-gradient(rgba(255,255,255,.99),rgba(252,253,255,.99))}
+.section:nth-of-type(odd){background:linear-gradient(rgba(245,248,252,.99),rgba(239,243,248,.99))}
+.section.tight{padding-top:4.5rem}
+.section > .section-head,.section > .card-grid,.section > .steps,.section > .split,.section > .faq-groups,.section > .license-strip,.section > .pricing-actions{width:min(1180px,calc(100% - 40px));margin-left:auto;margin-right:auto}
 .section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:1.4rem;margin-bottom:1.25rem}
 .section h2{font-size:clamp(1.45rem,2.4vw,2.15rem);max-width:740px}
 .section-head p{font-size:.9rem;line-height:1.7;color:var(--muted);max-width:430px;margin:0}
 .card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.9rem}
-.card,.panel,.step{border:1px solid var(--line);border-radius:8px;background:#fff;padding:1.05rem 1.1rem}
+.card,.panel,.step{border:1px solid rgba(20,32,51,.12);border-radius:8px;background:#fff;padding:1.2rem 1.25rem;box-shadow:rgba(24,39,60,.06) 0 14px 36px}
 .card{min-height:154px}
 .card.accent{background:var(--teal-soft);border-color:#bde9df}
 .card.warn,.panel.warn{background:#fffbeb;border-color:#fde1a7}
@@ -105,7 +109,17 @@ h1{font-family:"IBM Plex Sans",sans-serif;font-size:clamp(2.45rem,5vw,4.65rem);l
 .license-item{border:1px solid var(--line);border-radius:8px;background:#fff;padding:1rem}
 .license-item strong{display:block;font-family:"IBM Plex Sans",sans-serif;font-size:1.15rem;color:var(--ink);line-height:1.15;margin-bottom:.32rem}
 .license-item span{display:block;font-size:.78rem;line-height:1.5;color:var(--muted)}
-.cta-band{width:min(1160px,calc(100% - 40px));margin:1rem auto 3.5rem;border:1px solid #cfe0f5;border-radius:8px;background:var(--navy);color:#fff;padding:1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1.2rem}
+.pricing-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem;margin-top:.9rem}
+.pricing-actions .btn{min-height:52px}
+#lizenz{background:linear-gradient(rgba(255,255,255,.03),rgba(255,255,255,0)),var(--navy);color:#fff}
+#lizenz .kicker{color:#9ee6dc}
+#lizenz h2,#lizenz .card h3{color:#fff}
+#lizenz .section-head p,#lizenz .card p{color:#d5e3f5}
+#lizenz .license-item,#lizenz .card{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.16);box-shadow:none;color:#fff}
+#lizenz .license-item strong{color:#fff;font-size:1.55rem}
+#lizenz .license-item span{color:#d5e3f5}
+#lizenz .pricing-actions .btn.primary{box-shadow:rgba(0,0,0,.16) 0 18px 34px}
+.cta-band{width:min(1180px,calc(100% - 40px));margin:1rem auto 3.5rem;border:1px solid #cfe0f5;border-radius:8px;background:var(--navy);color:#fff;padding:1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1.2rem}
 .cta-band h2{font-family:"IBM Plex Sans",sans-serif;font-size:1.45rem;line-height:1.2;margin:0 0 .28rem;color:#fff}
 .cta-band p{font-size:.88rem;line-height:1.65;color:#d5e3f5;max-width:690px;margin:0}
 footer{border-top:1px solid var(--line);background:#fff;padding:1.15rem 0;color:#64748b;font-size:.78rem}
@@ -121,10 +135,11 @@ footer{border-top:1px solid var(--line);background:#fff;padding:1.15rem 0;color:
   .hero-bg{background-image:linear-gradient(90deg,rgba(7,29,52,.94) 0%,rgba(7,29,52,.82) 58%,rgba(7,29,52,.42) 100%),linear-gradient(180deg,rgba(7,29,52,.28) 0%,rgba(7,29,52,.28) 50%,rgba(7,29,52,.82) 100%),url("hero-screenshot.png");background-size:auto 100%;background-position:58% top}
   .hero-inner{width:min(100% - 28px,720px);padding:4.2rem 0 3rem}
   h1{font-size:clamp(2.2rem,12vw,3.45rem)}
-  .proof-grid,.card-grid,.steps,.split,.trust,.license-strip{grid-template-columns:1fr}
+  .proof-grid,.card-grid,.steps,.split,.trust,.license-strip,.pricing-actions{grid-template-columns:1fr}
   .teaser{width:min(100% - 28px,720px);grid-template-columns:1fr;margin-top:-28px}
   .mini-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
-  .section{width:min(100% - 28px,720px);padding:2.2rem 0}
+  .section{width:100%;padding:2.2rem 0}
+  .section > .section-head,.section > .card-grid,.section > .steps,.section > .split,.section > .faq-groups,.section > .license-strip,.section > .pricing-actions{width:min(100% - 28px,720px)}
   .section-head{display:block}
   .section-head p{margin-top:.55rem;max-width:none}
   .cta-band{width:min(100% - 28px,720px);display:block;padding:1.2rem}
@@ -148,7 +163,8 @@ footer{border-top:1px solid var(--line);background:#fff;padding:1.15rem 0;color:
   .proof{min-height:92px;padding:.55rem .45rem}
   .proof strong{font-size:.82rem;line-height:1.15}
   .proof span{font-size:.62rem;line-height:1.35}
-  .teaser,.section,.cta-band{width:calc(100% - 22px)}
+  .teaser,.cta-band{width:calc(100% - 22px)}
+  .section > .section-head,.section > .card-grid,.section > .steps,.section > .split,.section > .faq-groups,.section > .license-strip,.section > .pricing-actions{width:calc(100% - 22px)}
   .mini-grid{display:none}
 }
 </style>
@@ -170,7 +186,7 @@ footer{border-top:1px solid var(--line);background:#fff;padding:1.15rem 0;color:
       <a href="#lizenz">Lizenz</a>
       <a href="#faq">FAQ</a>
     </nav>
-    <a class="btn dark" href="https://github.com/BM1964-25/SMART-RISK-Vertragsanalyse" target="_blank" rel="noopener">3 Tage kostenlos testen</a>
+    <a class="btn dark" href="https://github.com/BM1964-25/SMART-RISK-Vertragsanalyse" target="_blank" rel="noopener">Jetzt kaufen →</a>
   </div>
 </header>
 
@@ -187,21 +203,21 @@ footer{border-top:1px solid var(--line);background:#fff;padding:1.15rem 0;color:
         <h1 id="hero-title">SMART RISK Vertragsanalyse</h1>
         <p>Risiken erkennen. Vertraege verstehen. Sicher entscheiden. SMART RISK Vertragsanalyse prueft Vertragstexte KI-gestuetzt, strukturiert Fundstellen, gibt Empfehlungen und erzeugt lokale Akten sowie druckbare Ergebnisberichte. Kein Installer erforderlich.</p>
         <div class="hero-actions">
-          <a class="btn primary" href="https://github.com/BM1964-25/SMART-RISK-Vertragsanalyse" target="_blank" rel="noopener">3 Tage kostenlos testen</a>
-          <a class="btn secondary" href="#ablauf">Ablauf ansehen</a>
+          <a class="btn primary" href="https://github.com/BM1964-25/SMART-RISK-Vertragsanalyse" target="_blank" rel="noopener">Jahreslizenz kaufen →</a>
+          <a class="btn secondary" href="https://github.com/BM1964-25/SMART-RISK-Vertragsanalyse" target="_blank" rel="noopener">3 Tage kostenlos testen →</a>
         </div>
         <div class="proof-grid" aria-label="Kernvorteile">
           <div class="proof">
-            <strong>1000 Trial-Credits</strong>
-            <span>App-spezifische BuiltSmart AI Test-Credits beim Start des Trials.</span>
+            <strong>Risiken priorisieren</strong>
+            <span>Risiko-Score, Schweregrade und Fundstellen strukturiert einordnen.</span>
           </div>
           <div class="proof">
-            <strong>499 EUR netto</strong>
-            <span>Jahreslizenz pro App und Jahr mit 12 Monaten Laufzeit.</span>
+            <strong>Klauseln verstehen</strong>
+            <span>Kategorie, Klauselbezug, Folge und Empfehlung nachvollziehbar sehen.</span>
           </div>
           <div class="proof">
-            <strong>Persoenlicher Zugriff</strong>
-            <span>Pro Lizenz ist ein persoenlicher Nutzerzugriff vorgesehen.</span>
+            <strong>Berichte sichern</strong>
+            <span>Lokale Akten, JSON Export/Import und druckbare Ergebnisberichte nutzen.</span>
           </div>
         </div>
       </div>
@@ -330,6 +346,10 @@ footer{border-top:1px solid var(--line);background:#fff;padding:1.15rem 0;color:
       <div class="license-item"><strong>3 Tage</strong><span>Kostenlos testen mit vollem App-Zugriff und 1000 app-spezifischen Trial-Credits.</span></div>
       <div class="license-item"><strong>499 EUR netto</strong><span>Jahreslizenz pro App und Jahr. Laufzeit 12 Monate, automatische Verlaengerung um weitere 12 Monate.</span></div>
       <div class="license-item"><strong>1 Monat</strong><span>Kuendigung bis 1 Monat vor Ablauf. Mehrere Lizenzen derselben App koennen ueber die Menge im Checkout gekauft werden.</span></div>
+    </div>
+    <div class="pricing-actions">
+      <a class="btn primary" href="https://github.com/BM1964-25/SMART-RISK-Vertragsanalyse" target="_blank" rel="noopener">Jahreslizenz kaufen →</a>
+      <a class="btn secondary" href="https://github.com/BM1964-25/SMART-RISK-Vertragsanalyse" target="_blank" rel="noopener">3 Tage kostenlos testen →</a>
     </div>
     <div class="card-grid" style="margin-top:.9rem">
       <article class="card">
@@ -488,8 +508,8 @@ footer{border-top:1px solid var(--line);background:#fff;padding:1.15rem 0;color:
       <p>Starten Sie SMART RISK Vertragsanalyse mit vollem App-Zugriff im Trial. Fuer Trial, Kauf, Lizenzpruefung und BuiltSmart AI Credits ist ein Nutzerkonto mit Magic Link Login erforderlich.</p>
     </div>
     <div class="hero-actions">
-      <a class="btn primary" href="https://github.com/BM1964-25/SMART-RISK-Vertragsanalyse" target="_blank" rel="noopener">3 Tage kostenlos testen</a>
-      <a class="btn light" href="https://github.com/BM1964-25/SMART-RISK-Vertragsanalyse" target="_blank" rel="noopener">Jahreslizenz kaufen</a>
+      <a class="btn primary" href="https://github.com/BM1964-25/SMART-RISK-Vertragsanalyse" target="_blank" rel="noopener">Jahreslizenz kaufen →</a>
+      <a class="btn secondary" href="https://github.com/BM1964-25/SMART-RISK-Vertragsanalyse" target="_blank" rel="noopener">3 Tage kostenlos testen →</a>
       <a class="btn light" href="https://github.com/BM1964-25/SMART-RISK-Vertragsanalyse" target="_blank" rel="noopener">Mit Magic Link einloggen</a>
     </div>
   </section>
