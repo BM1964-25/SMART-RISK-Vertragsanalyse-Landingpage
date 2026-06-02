@@ -84,6 +84,13 @@ h1{font-family:"IBM Plex Sans",sans-serif;font-size:clamp(2.45rem,5vw,4.65rem);l
 .feature-card .num{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:999px;background:#0e2138;color:#fff;font-family:"IBM Plex Sans",sans-serif;font-size:.78rem;font-weight:800;margin-bottom:1rem}
 .feature-card h3{font-size:.94rem;line-height:1.25;margin-bottom:.65rem}
 .feature-card p{font-size:.86rem;line-height:1.7;color:#4a5b6e}
+.results-section{background:linear-gradient(180deg,#fff 0%,#f6f9fc 100%)}
+.results-grid{gap:1rem}
+.result-card{position:relative;min-height:230px;padding:1.45rem;background:#fff;border-color:rgba(16,32,51,.1);box-shadow:rgba(24,39,60,.05) 0 18px 44px}
+.result-card::after{content:"";position:absolute;left:1.45rem;right:1.45rem;top:1.45rem;height:1px;background:linear-gradient(90deg,var(--teal),rgba(13,148,136,0))}
+.result-card .label{display:block;font-family:"IBM Plex Sans",sans-serif;font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin:1rem 0 .85rem}
+.result-card h3{font-size:1.35rem;line-height:1.08;letter-spacing:0;text-transform:none;margin-bottom:.8rem}
+.result-card p{font-size:.9rem;line-height:1.72;color:#44566b}
 .workflow-track{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.3rem;margin:2rem auto 1.45rem}
 .workflow-track::before{content:"";position:absolute;left:7%;right:7%;top:28px;height:2px;background:linear-gradient(90deg,#8db7e6,var(--teal));opacity:.75}
 .workflow-node{position:relative;z-index:1;text-align:center;font-family:"IBM Plex Sans",sans-serif;color:var(--ink)}
@@ -330,26 +337,29 @@ footer{border-top:1px solid var(--line);background:#fff;padding:1.15rem 0;color:
     </div>
   </section>
 
-  <section class="section" aria-label="Analyseergebnisse">
+  <section class="section results-section" aria-label="Analyseergebnisse">
     <div class="section-head">
       <div>
         <div class="kicker">Analyseergebnisse</div>
-        <h2>Vom Vertragstext zu klaren Entscheidungsgrundlagen.</h2>
+        <h2>Risiken, Fundstellen und nächste Schritte auf einen Blick.</h2>
       </div>
-      <p>SMART RISK bereitet die Prüfung so auf, dass Risiken priorisiert, Fundstellen nachvollziehbar dokumentiert und nächste Schritte besser entschieden werden können.</p>
+      <p>SMART RISK übersetzt komplexe Vertragstexte in eine belastbare Ergebnisstruktur: priorisiert, nachvollziehbar und bereit für interne Abstimmung, Nachverhandlung oder Dokumentation.</p>
     </div>
-    <div class="card-grid">
-      <article class="card accent">
-        <h3>Risiko-Score</h3>
-        <p>Ein komprimierter Überblick zeigt Risikoniveau, Schweregrade und auffällige Kategorien für die schnelle Orientierung.</p>
+    <div class="card-grid results-grid">
+      <article class="card result-card">
+        <span class="label">01 Transparenz</span>
+        <h3>Risikobild verdichten</h3>
+        <p>Score, Schweregrade und Top-Kategorien machen sofort sichtbar, wo rechtliche, wirtschaftliche oder operative Aufmerksamkeit erforderlich ist.</p>
       </article>
-      <article class="card">
-        <h3>Fundstellen</h3>
-        <p>Einzelne Risiken werden mit Kategorie, Klauselbezug, Begründung und möglichen Folgen nachvollziehbar strukturiert.</p>
+      <article class="card result-card">
+        <span class="label">02 Evidenz</span>
+        <h3>Fundstellen belastbar machen</h3>
+        <p>Jede Auffälligkeit wird mit Klauselbezug, Kategorie, Begründung und möglicher Folge strukturiert, damit Prüfung und Review nachvollziehbar bleiben.</p>
       </article>
-      <article class="card">
-        <h3>Empfehlungen</h3>
-        <p>Priorisierte Hinweise unterstützen Prüfung, Nachverhandlung, Dokumentation und die Erstellung des Ergebnisberichts.</p>
+      <article class="card result-card">
+        <span class="label">03 Umsetzung</span>
+        <h3>Entscheidungen vorbereiten</h3>
+        <p>Priorisierte Empfehlungen, lokale Akten und druckbare Berichte schaffen eine klare Grundlage für Freigabe, Nachverhandlung oder externe Prüfung.</p>
       </article>
     </div>
   </section>
