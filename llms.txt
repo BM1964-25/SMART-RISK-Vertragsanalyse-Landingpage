@@ -1,0 +1,88 @@
+# SMART RISK Vertragsanalyse
+
+App-Name: SMART RISK Vertragsanalyse
+Kategorie: KI-gestützte Vertragsanalyse und Vertragsvorprüfung
+Anbieter: SmartBuilt-AI / BuiltSmart Hub - Bernhard Metzger
+Kurzbeschreibung: Browserbasierte App zur KI-gestützten Vorprüfung deutschsprachiger, textbasierter Vertragsdokumente. Die App erkennt kritische Klauseln, priorisiert Risiken und strukturiert Fundstellen, Empfehlungen sowie Berichte.
+
+Zielgruppe: Selbstständige, kleine Unternehmen, Geschäftsführung, Einkauf, Projektverantwortliche, Verwaltung, Berater, Auftraggeber, Auftragnehmer und Fachverantwortliche, die Verträge vor Freigabe, Verhandlung, Nachtrag, Einkauf oder Unterzeichnung strukturiert vorbewerten möchten.
+
+Hauptnutzen:
+- Verträge schneller verstehen
+- Risiken früher erkennen
+- Kritische Klauseln gezielt prüfen
+- Fundstellen, Risiko-Score und Empfehlungen als Grundlage für Freigabe, Nachverhandlung oder weitere Fachprüfung nutzen
+
+Zentrale Funktionen:
+- Vertragstext hochladen oder direkt einfügen
+- Vertragspartei, Vertragstyp und Prüfperspektive festlegen
+- Prüfkategorien und Analysefokus bestimmen
+- Risiko-Score, Schweregrade, Kategorien und Klauselbezug anzeigen
+- Fundstellen, Begründungen, mögliche Folgen und Empfehlungen strukturieren
+- Lokale Akten speichern
+- JSON Export und Import für gespeicherte Inhalte
+- Druckbare HTML-/Print-Ergebnisberichte
+
+KI-Funktionen:
+- KI-gestützte Analyse von Vertragstexten
+- Strukturierung von Risiken, Empfehlungen und Zusammenfassungen
+- Nutzung über BuiltSmart AI Credits oder optional über eigenen Anthropic API Key
+- Eigener Anthropic API Key bleibt lokal in der App; Abrechnung direkt über Anthropic
+
+Nutzungsmodell:
+- Browserbasierte App
+- Persönliches Nutzerkonto für Trial, Kauf, Lizenzprüfung und BuiltSmart AI Credits
+- Login per Magic Link
+- Pro Lizenz ein persönlicher Nutzerzugriff
+- Mehrere Lizenzen derselben App möglich
+- Keine gemeinsamen Cloud-Arbeitsbereiche
+
+Speicherlogik:
+- App-Inhalte bleiben lokal im Browser, soweit sie gespeichert werden
+- Andere Nutzer greifen nicht auf dieselben lokalen Daten zu
+- Keine automatische zentrale Cloud-Datenbank
+- Keine automatische Synchronisierung zwischen Nutzern
+- Export und Import über JSON
+
+Lizenzmodell:
+- Jahreslizenz
+- Preis: 899 EUR netto pro App und Jahr
+- Preis inkl. 19 Prozent MwSt.: 1.069,81 EUR
+- Entspricht 74,92 EUR netto pro Monat
+- Laufzeit: 12 Monate
+- Automatische Verlängerung um weitere 12 Monate
+- Kündigung bis 1 Monat vor Ablauf
+- 3 Tage Trial
+- 1000 app-spezifische BuiltSmart AI Trial-Credits beim Start des Trials
+- Jahreslizenz enthält den App-Zugang; KI-Aktionen werden über BuiltSmart AI Credits oder eigenen Anthropic API Key genutzt
+
+Geeignete Vertragsarten:
+- Mietverträge und Gewerbemietverträge
+- Arbeitsverträge
+- Dienstleistungs- und Beratungsverträge
+- Werkverträge
+- Kauf- und Lieferverträge
+- Bauverträge, VOB-/HOAI-nahe Verträge
+- B2B-Verträge
+- Projektvereinbarungen
+- Allgemeine Geschäftsbedingungen
+
+Wichtige Einschränkungen:
+- SMART RISK Vertragsanalyse ist eine KI-gestützte Arbeitshilfe zur Vertragsvorprüfung
+- Keine anwaltliche Beratung
+- Keine verbindlichen Rechtsentscheidungen
+- Keine Gerichtsprognosen
+- Nur eingeschränkt geeignet für hochkomplexe M&A-, Finanzierungs-, Kapitalmarkt-, Versicherungs- oder internationale Verträge
+- Vertragswerke, die stark von Anlagen, Zeichnungen, Leistungsverzeichnissen oder Spezialprüfungen abhängen, sollten fachlich oder rechtlich gegengeprüft werden
+- Bei größeren Bau-, VOB- und HOAI-nahen Vorhaben sollte die finale Bewertung von Vergütung, Nachträgen, Leistungsphasen, Abrechnung, Verjährung oder projektspezifischen Besonderheiten fachlich oder rechtlich geprüft werden
+
+Plattformen: Moderne Browser auf Windows, macOS und anderen Systemen
+Kauf-/Kontaktlink: https://bm1964-25.github.io/Landing-Tafel-Kontakt/
+Landingpage: https://bm1964-25.github.io/SMART-RISK-Vertragsanalyse-Landingpage/
+Open-Graph-Bild: https://bm1964-25.github.io/SMART-RISK-Vertragsanalyse-Landingpage/hero-screenshot.png
+
+Rechtliche Links:
+- Impressum: https://www.built-smart-hub.com/impressum
+- Datenschutz: https://www.built-smart-hub.com/datenschutz
+- AGB: https://www.built-smart-hub.com/agb
+- Widerrufsbelehrung: https://www.built-smart-hub.com/widerrufsbelehrung

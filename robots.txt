@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bm1964-25.github.io/SMART-RISK-Vertragsanalyse-Landingpage/sitemap.xml
